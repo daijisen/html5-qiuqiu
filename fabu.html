@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息发布</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="jquery.mobile-1.4.5/jquery-2.2.2.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        $(document).on('focus', 'input', function () {
+            if ($(this).hasClass('ui-input-text') && $(this).attr('type') == 'number') {
+                $(this).closest('div').addClass('noshadow');
+            }
+        });
+    </script>
+</head>
+<body>
+<style>
+    .biaoti{
+        font-family: 幼圆;
+        font-size: large;
+    }
+    .biaoti a{
+        font-family: 幼圆;
+        font-size: large;
+    }
+    .shuru{
+        border: 0;
+        border-top: 0;
+        background-color: white;
+    }
+    body{
+        background-color: white;
+    }
+</style>
+<div data-role="page" id="#1"> <!-- 页-->
+    <div data-role="header"class="biaoti"> <!-- 标题-->
+        <a href="#" data-role="button" data-corners="true">返回</a>
+        <h1>我要组团</h1>
+        <a href="#" data-role="button" data-corners="true">发布</a>
+    </div>
+    <div data-role="content">
+        <div data-role="fieldcontain">
+            <label for="textarea"></label>
+            <textarea cols="40" rows="8" name="textarea" id="textarea" class="shuru"data-position="incline"></textarea>
+        </div>
+    </div>
+    <div data-role="footer"data-position="fixed" style="text-align: center">
+
+           <a href="#" data-role="button" data-icon="search" data-iconpos="notext"></a>
+        <a href="#" data-role="icon" data-icon="search" data-iconpos="notext"></a>
+        <a href="#" data-role="icon" data-icon="search" data-iconpos="notext"></a>
+
+    </div>
+</div>
+<div data-role="page" id="#2"> <!-- 页-->
+    <div data-role="header"> <!-- 标题--></div>
+    <div data-role="content"></div>
+    <div data-role="footer"></div>
+</div>
+
+</body>
+</html>
