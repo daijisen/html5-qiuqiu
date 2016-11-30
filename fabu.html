@@ -41,6 +41,20 @@
         <a href="#" data-role="button" data-corners="true">发布</a>
     </div>
     <div data-role="content">
+          <form method="post" action="demoform.asp">
+            <fieldset data-role="fieldcontain">
+                <label for="day">选择类别</label>
+                <select name="day" id="day">
+                    <option value="bas">篮球</option>
+                    <option value="foo">足球</option>
+                    <option value="pin">兵乓球</option>
+                    <option value="bad">羽毛球</option>
+                    <option value="run">跑步</option>
+                    <option value="lun">轮滑</option>
+                    <option value="dan">街舞</option>
+                </select>
+            </fieldset>
+        </form>
         <div data-role="fieldcontain">
             <label for="textarea"></label>
             <textarea cols="40" rows="8" name="textarea" id="textarea" class="shuru"data-position="incline"></textarea>
