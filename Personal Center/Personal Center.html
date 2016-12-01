@@ -30,6 +30,7 @@
   @media all and (min-width: 10em) {
     .my-breakpoint.ui-grid-a .ui-block-a { width: 29.95%; }
     .my-breakpoint.ui-grid-a .ui-block-b { width: 70.05%; }
+      img{width:auto;height:auto;max-width:100%;max-height:100%;}
   }
   </style>
 
@@ -45,18 +46,21 @@
    <div data-role=“content”> 
    <div class="ui-grid-a my-breakpoint">
       <div class="ui-block-a"><div class="ui-body ui-body-d">
-      <img src="1.jpg" width="100%">
+      <img src="1.jpg" >
       </div></div>
       <div class="ui-block-b"><div class="ui-body ui-body-d">
         <li>
 <h2>阿蒂芬</h2>
-  <form method="post" action="demoform.asp"> 
-    <label for="fname" class="ui-hidden-accessible">简介 </label> 
-    <input type="text" name="fname" id="fname" placeholder="简介...">
-     </form>
+
 </li> 
 </div></div>
     </div>
+       <div class="ui-grid-b">
+       <form method="post" action="demoform.asp">
+           <label for="fname" class="ui-hidden-accessible">简介 </label>
+           <input type="text" name="fname" id="fname" placeholder="简介...">
+       </form>
+           </div>
     <ul data-role="listview">
       <li><a href="Comment.html" class="ui-btn ui-icon-star ui-btn-icon-left">我的点评</a></li>
       <li><a href="schedule.html" class="ui-btn ui-icon-video ui-btn-icon-left">我的日程</a></li>
