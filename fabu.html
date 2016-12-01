@@ -33,6 +33,18 @@
     body{
         background-color: white;
     }
+      .tubiao{
+        padding-left: 25px;
+    }
+     .xuanze{
+        font-family: 幼圆;
+    }
+    .fabu{
+        font-family: 黑体;
+    }
+    .daxue{
+        font-family:幼圆;
+    }
 </style>
 <div data-role="page" id="w1"> <!-- 页-->
     <div data-role="header"class="biaoti"> <!-- 标题-->
@@ -41,17 +53,43 @@
         <a href="#" data-role="button" data-corners="true">发布</a>
     </div>
     <div data-role="content">
+          <form method="post" action="demoform.asp">
+            <fieldset data-role="fieldcontain">
+                <label for="ball">选择类别</label>
+                <select name="ball" id="ball">
+                    <option value="bas">篮球</option>
+                    <option value="foo">足球</option>
+                    <option value="pin">兵乓球</option>
+                    <option value="bad">羽毛球</option>
+                    <option value="run">跑步</option>
+                    <option value="lun">轮滑</option>
+                    <option value="dan">街舞</option>
+                </select>
+            </fieldset>
+                <fieldset data-role="fieldcontain">
+                <label for="sch">选择学校</label>
+                <select name="sch" id="sch" class="daxue">
+                    <option value="hsf">河北师范大学</option>
+                    <option value="hcj">河北财经大学</option>
+                    <option value="hkj">河北科技大学</option>
+                    <option value="stz">石家庄铁道职业技术学院</option>
+                    <option value="hui">汇华学院</option>
+                    <option value="hyk">河北医科大学</option>
+                    <option value="othe">其他</option>
+                </select>
+            </fieldset>
+        </form>
         <div data-role="fieldcontain">
             <label for="textarea"></label>
             <textarea cols="40" rows="8" name="textarea" id="textarea" class="shuru"data-position="incline"></textarea>
         </div>
     </div>
     <div data-role="footer"data-position="fixed" style="text-align: center">
-
-           <a href="#" data-role="button" data-icon="search" data-iconpos="notext"></a>
-        <a href="#" data-role="icon" data-icon="search" data-iconpos="notext"></a>
-        <a href="#" data-role="icon" data-icon="search" data-iconpos="notext"></a>
-
+          <div class="tubiao">
+            <a href="#" data-role="button" data-icon="cry" data-iconpos="notext"class="ui-nodisc-icon"></a>
+            <a href="#" data-role="icon" data-icon="photo" data-iconpos="notext"class="ui-nodisc-icon"></a>
+             <a href="#" data-role="button" data-icon="xiangji" data-iconpos="notext"class="ui-nodisc-icon"></a>
+        </div>
     </div>
 </div>
 <div data-role="page" id="w2">
