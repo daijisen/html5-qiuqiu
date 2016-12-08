@@ -1,35 +1,180 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Comment</title>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-    <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'/> 
-    <script src="js/jquery-2.2.2.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script type='text/javascript' src='scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='scripts/jquery.easing.1.3.js'></script> 
-    <script type='text/javascript' src='scripts/camera.min.js'></script>
-    <link rel="stylesheet" href="css/themes/blue.css" />
-    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/sm.min.css">
+    <script type='text/javascript' src="js/zepto.min.js" charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="css/sm.min,sm-extend.min.css">
+    <script type='text/javascript' src='js/sm.min,sm-extend.min.js' charset='utf-8'></script>
+    <script src="icon/iconfont.js"></script>
+
+    <title>关于我的</title>
+
+    <style>
+        .title{
+            font-family: 幼圆;
+            font-size: large;
+            color: #ffffff;
+        }
+        .bar .bar-nav{
+            width: 355px;
+            height: 40px;
+        }
+        .icon.pull-left{
+            width: 2em;
+            height: 100%;
+            font-size: larger;
+            color: #93f7ff;
+        }
+
+        .bar.bar-nav{
+            background: url("5.png");
+        }
+        .button.pull-right{
+            font-family: 幼圆;
+            color: white;
+        }
+        .card{
+            font-family: 幼圆;
+            color:black;
+        }
+
+        .facebook-name{
+            width: 270px;
+        }
+        .facebook-date{
+            width: 270px;
+
+        }
+        .icon{
+            width: 30px;
+            height: 30px;
+        }
+      .d3{
+          padding-left: 10px;
+      }
+        .card-content{
+            padding-left: 12px;
+        }
+        .card-content.d5{
+
+        }
+        .card.facebook-card{
+            padding-bottom: 5px;
+        }
+        .facebook-date{
+            font-size: smaller;
+        }
+
+
+
+
+    </style>
 
 </head>
 <body>
-<div data-role=“page” id="Comment">
-  <div data-role="header" data-position="fixed">
-  <a href="Personal Center.html" data-role="button" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext"></a>
-   <h1>我的点评</h1> 
-   <a href="Comment.html" data-role="button" class="ui-btn ui-corner-all ui-icon-recycle ui-btn-icon-notext"></a> 
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+                  <a href="#">
+                     <svg class="icon pull-left" aria-hidden="true">
+                      <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                      </svg>
+                   </a>
+                    <h1 class="title">有人叫我</h1>
+            <button class="button button-link button-nav pull-right">
+                刷新
+            </button>
+
+        </header>
+
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+                <div class="card facebook-card">
+                    <a href="#" class="d6">
+                        <div class="card-header no-border">
+                           <div class="facebook-avatar"><img src="3.png" width="40" height="40"></div>
+                           <div class="facebook-name">
+                               夜萧
+                           </div>
+                           <div class="facebook-date"><small>星期一 3:47pm</small></div>
+
+                        </div>
+                    </a>
+                    <div class="card-content">
+                         同学，老子想要和你一起踢球！！
+                        <div class="card">
+                            <div class="card-content d5">
+                                <div class="list-block media-list">
+                                    <ul >
+                                        <li class="item-content">
+                                            <div class="item-media">
+                                                <a href="#"><img src="images/a.jpg" width="55" height="55"></a>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">软件梅西赵子旭</div>
+                                                </div>
+                                                <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="card facebook-card">
+                <a href="#" class="d6">
+                    <div class="card-header no-border">
+                        <div class="facebook-avatar"><img src="4.png" width="40" height="40"></div>
+                        <div class="facebook-name">
+                            jiaomingbo
+                        </div>
+                        <div class="facebook-date"><small>星期一 3:47pm</small></div>
+
+                    </div>
+                </a>
+                <div class="card-content">
+                   加入了我的队伍
+                    <div class="card">
+                        <div class="card-content d5">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <a href="#"><img src="images/a.jpg" width="55" height="55"></a>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">软件梅西赵子旭</div>
+                                            </div>
+                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 </div>
-<div data-role="content" align="center">
-<img src="2.png" >
-<p>暂无点评</p>
-</div>
-<div data-dole="footer">
-</div>
-  </div>
+
+
+
+
+
 </body>
 </html>
 
