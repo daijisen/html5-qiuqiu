@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/sm.min.css">
+    <script type='text/javascript' src="js/zepto.min.js" charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="css/sm.min,sm-extend.min.css">
+    <script type='text/javascript' src='js/sm.min,sm-extend.min.js' charset='utf-8'></script>
+    <script src="icon/iconfont.js"></script>
+    <title>Title</title>
+    <style>
+        .content-block{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .title{
+            font-family: 幼圆;
+            font-size: large;
+            color: #ffffff;
+        }
+        .bar .bar-nav{
+            width: 355px;
+            height: 40px;
+        }
+        .icon.pull-left{
+            width: 2em;
+            height: 100%;
+            font-size: larger;
+            color: #93f7ff;
+        }
+
+        .bar.bar-nav{
+            background: url("image/9.png");
+        }
+        .icon{
+            width: 60px;
+            height: 60px;
+        }
+        .button{
+           border-color: #a4a498;
+            background-color: #c6cbbb;
+            color: white;
+        }
+        .content-block{
+            color: white;
+        }
+        .list-block.media-list{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page-group">
+    <!-- 单个page ,第一个.page默认被展示-->
+    <div class="page">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+
+            <h1 class="title">标题</h1>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-feihang" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external active" href="#">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">我的</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-danger">NBA</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">西甲</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">英超</a></div>
+                </div>
+            </div>
+            <div class="list-block media-list">
+                <ul>
+                    <li>
+                        <a href="新闻内容页.html" class="item-link item-content">
+                            <div class="item-media"><img src="image/111.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">沃顿：我们想让拉塞尔打出攻击性</div>
+
+                                </div>
+
+                                <div class="item-text">虽然拉塞尔昨日付出，但是可以看出来他在场上打的非常谨慎.</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="image/112.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">卡莱尔称赞马刺</div>
+                                </div>
+
+                                <div class="item-text">邓肯进入联盟后，从未缺席过季后赛</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="image/113.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">比尔砍下职业新高</div>
+                                </div>
+
+                                <div class="item-text">此外，也是生涯背靠背砍下30分</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="item-link item-content">
+                            <div class="item-media"><img src="image/118.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">巴特勒戴维斯获周最佳</div>
+
+                                </div>
+
+                                <div class="item-text">公牛鹈鹕均三胜一负</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
