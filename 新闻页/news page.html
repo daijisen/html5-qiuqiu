@@ -5,27 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <link rel="stylesheet" href="res/jquery.mobile-1.4.5.min.css">
     <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'/>
-    <style type="text/css">
-
-        .con{
-            width:100%;
-            float:left;
-        }
-        .ww{
-            width:100%;
-            float:left;
-        }
-        .left{
-            width:70%;
-            float:left;
-
-        }
-        .right{
-            width:30%;
-            float:left;
-
-        }
-    </style>
+    <link rel="stylesheet" href="css/yinyong.css">
 
     <script src="res/jquery-2.2.2.js"></script>
     <script src="res/jquery.mobile-1.4.5.min.js"></script>
@@ -36,16 +16,57 @@
     <link rel="stylesheet" href="css/themes/blue.css" />
     <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 
-    <script>
-        jQuery(function(){
+    <link href="css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
 
-            jQuery('#camera_wrap_1').camera({
-                height:'36%',
-                pagination: true,
-                thumbnails: true,
+    <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+    <script src="js/jquery.slideBox.js" type="text/javascript"></script>
+
+    <script>
+
+        jQuery(function($){
+
+            $('#demo1').slideBox();
+
+            $('#demo2').slideBox({
+
+                direction : 'top',//left,top#方向
+
+                duration : 0.3,//滚动持续时间，单位：秒
+
+                easing : 'linear',//swing,linear//滚动特效
+
+                delay : 5,//滚动延迟时间，单位：秒
+
+                startIndex : 1//初始焦点顺序
+
             });
+
+            $('#demo3').slideBox({
+
+                duration : 0.3,//滚动持续时间，单位：秒
+
+                easing : 'linear',//swing,linear//滚动特效
+
+                delay : 5,//滚动延迟时间，单位：秒
+
+                hideClickBar : false,//不自动隐藏点选按键
+
+                clickBarRadius : 10
+
+            });
+
+            $('#demo4').slideBox({
+
+                hideBottomBar : true//隐藏底栏
+
+            });
+
         });
+
     </script>
+
+
 </head>
 <body>
 <div data-role="header">
@@ -54,63 +75,56 @@
 
 
     <div data-role="controlgroup" data-type="horizontal" id="gbtn">
-        <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-mini">NBA</a>
+        <a href="newsbiaoqian.html" class="ui-btn ui-btn-inline ui-corner-all ui-mini">NBA</a>
         <a href="#" class="ui-btn  ui-btn-inline ui-corner-all  ui-mini ">CBA</a>
         <a href="#" class="ui-btn  ui-btn-inline ui-corner-all ui-mini " data-icon="comment">法甲</a>
         <a href="#" class="ui-btn  ui-btn-inline ui-corner-all ui-mini " data-icon="comment">NHL</a>
         <a href="#" class="ui-btn  ui-btn-inline ui-corner-all ui-mini " data-icon="comment">西甲</a>
         <a href="#" class="ui-btn  ui-btn-inline ui-corner-all ui-mini " data-icon="comment">斯诺克</a>
+
     </div>
 
+<div id="demo4" class="slideBox">
+
+    <ul class="items">
+
+        <li><a href="#" title="1"><img src="image/115.png"></a></li>
+
+        <li><a href="#" title="2"><img src="image/116.png"></a></li>
+
+        <li><a href="#" title="3"><img src="image/117.JPG"></a></li>
+
+    </ul>
+
 </div>
-<div data-role="content">
-    <div class="fluid_container">
-    <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
-        <div data-thumb="image/26.png" data-src="image/117.png">
-            <div class="camera_caption fadeFromBottom">
-                低调的群熊，请不要忽视他们
-            </div>
-        </div>
-        <div data-thumb="image/27.png" data-src="image/115.png">
-            <div class="camera_caption fadeFromBottom">
-                伊戈达拉生涯集锦
-            </div>
-        </div>
-        <div data-thumb="image/28.png" data-src="image/116.png">
-            <div class="camera_caption fadeFromBottom">
-                我和克拉克森击个掌
-            </div>
-        </div>
-    </div>
-    </div>
 
         <div data-role="content" id="pageone">
 
                 <ul data-role="listview" >
                     <li>
-                        <a href="newsneirong.html">
-                            <img src="image/111.png">
+                        <a href="newsneirong.html" data-role="button">
+                            <img src="image/111.png" class="st">
                             <h2>沃顿：我们想让拉塞尔打出攻击性</h2>
                             <p>虽然拉塞尔昨日付出，但是可以看出来他在场上打的非常谨慎</p>
                         </a>
                     </li>
                     <li>
-                        <a href="newsneirong.html">
-                            <img src="image/112.png">
+                        <a href="newsneirong.html" data-role="button">
+                            <img src="image/112.png" class="st">
                             <h2>卡莱尔称赞马刺</h2>
                             <p>邓肯进入联盟后，从未缺席过季后赛</p>
                         </a>
                     </li>
                     <li>
-                    <a href="#">
-                        <img src="image/113.png">
+                    <a href="#"  data-role="button">
+                        <img src="image/113.png" class="st">
                         <h2>比尔砍下职业新高</h2>
                         <p>此外，也是生涯背靠背砍下30分</p>
                     </a>
                     </li>
                     <li>
-                        <a href="#">
-                            <img src="image/118.png">
+                        <a href="#" data-role="button">
+                            <img src="image/118.png" class="st">
                             <h2>巴特勒戴维斯获周最佳</h2>
                             <p>公牛鹈鹕均三胜一负</p>
                         </a>
