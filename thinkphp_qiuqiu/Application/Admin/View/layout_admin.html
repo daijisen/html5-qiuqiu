@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>求球</title>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/end/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/end/css/main.css"/>
+        <script type="text/javascript" src="__PUBLIC__/end/js/libs/modernizr.min.js"></script>
+        </head>
+<body>
+<style>
+    .topbar-wrap{
+        background-image: url('__PUBLIC__/end/images/headbg.jpg');
+        height:100px;
+    }
+    .topbar-inner{
+        padding-top:2% ;
+    }
+    body{
+        color: black;
+        background-image: url("__PUBLIC__/end/images/contentbg.jpg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:bottom right;
+    }
+
+    .sidebar-wrap{
+
+    }
+    .on1{
+        color: black;
+        font-family: 华文行楷;
+        font-size:50px;
+    }
+
+</style>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
+            <ul class="navbar-list clearfix">
+                <li><a class="on1" href="{:U('Admin/index/index')}">求球</a></li>
+                <li><a href="{:U('Home/index/index')}" >网站首页</a></li>
+            </ul>
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="#" style="color: #5DD300">管理员</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/user/index')}"><i class="icon-font">&#xe008;</i>所有用户</a></li>
+                        <li><a href="{:U('Admin/user/create')}"><i class="icon-font">&#xe005;</i>添加用户</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>活动管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/act/index')}"><i class="icon-font">&#xe017;</i>所有活动</a></li>
+                        <li><a href="{:U('Admin/act/create')}"><i class="icon-font">&#xe037;</i>添加活动</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>评论管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/comment/index')}"><i class="icon-font">&#xe017;</i>所有评论</a></li>
+                        <li><a href="{:U('Admin/comment/create')}"><i class="icon-font">&#xe037;</i>增加评论</a></li>
+                        <li><a href="{:U('Admin/comment/allhuifu')}"><i class="icon-font">&#xe037;</i>回复管理</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>新闻管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/news/index')}"><i class="icon-font">&#xe017;</i>所有新闻</a></li>
+                        <li><a href="{:U('Admin/news/create')}"><i class="icon-font">&#xe037;</i>添加新闻</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="icon-font">&#xe018;</i>团队管理</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/team/index')}"><i class="icon-font">&#xe017;</i>所有团队</a></li>
+                        <li><a href="{:U('Admin/team/create')}"><i class="icon-font">&#xe037;</i>新增团队</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+    <!--/sidebar-->
+    {__CONTENT__}
+    <!--/main-->
+    </div>
+</div>
+</body>
+</html>
