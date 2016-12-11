@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bf9a728-e31d-4cb7-915b-96303a7d1d09" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/View.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Conf/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/ActController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/CommentController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/IndexController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/NewsController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/TeamController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/UserController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Controller/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/Model/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/act/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/act/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/comment/allhuifu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/comment/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/comment/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/index/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/layout_admin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/news/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/news/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/news/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/team/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/team/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/user/create.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/user/edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/View/user/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Admin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Common/Common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Common/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Common/Conf/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Conf/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/IndexController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/LoginController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/NewsController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/PersonController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/SendController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Controller/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/Model/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/index/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/login/find.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/login/finished.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/login/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/login/register.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/news/newsneirong.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/news/newspage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/123.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/Aboutus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/Account security.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/Comment.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/Feedback.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/PersonalCenter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/ShoppingMall.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/account management.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/schedule.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/person/set.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/View/send/fabu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Home/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/14a18086b943edca376459c8f6ba411b.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/36087655c6ab8580337cdc45b35a926d.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/49cf5fb9b8c50a52c3dade74d40698a7.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/54987056b783d0941793fefa50915f61.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/65e605872ed5d34210f5b33beb13f5a3.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/73af413086a8fd4a001b99b8014b4d2b.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/78d1d27db5d632d58daa3a77f8a974bb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/9422665904e471006147a1d12ed26ddc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/9bfef0f9f473c596f668b6c9a32bfd5c.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/a97de654cc92b32827404671f46b79b4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/b5ad4f49dcda8fe56cd93a3bd92bb1bd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/b604a65d84e75a6f070304c8a0e4ebe0.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/c70afd967bb7f3a30ca61ab1497a5e42.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/d5e4511de0362b4ef13ab31d9942a908.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Admin/ff0cec1e29305ad1b6891fb379a5cd14.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/144a230a30acd2ee863075dc8f8befb9.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/267b2a6765880db3fcd6dea556f2d041.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/50c9f5d2ef37c2cf131d5cf1381d3a4b.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/524a08806bc29449645d93a7a8f8e680.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/6b0579d21382deafa19e9f87ed4a0dbd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/7a1e3c5dd3f70e188ce39967e8238ca5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/8d480c0d18e938409b9a23ee0440195f.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/93e7a2d9ee98cbc3eea7543c830988b0.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/a2de26e538e0e2122a132872a698ab3a.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/a3adf04185b979b90b62332b6cff9df4.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/cb5edfd8e0f625c6aa465287eee09241.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/cef6c4316d9ca5cd870a66d78f90a3d1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/ec793d850d13cbe1bc7248c0010c078c.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Home/f8aceb5e852fc8e975a5438f53272efe.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Wap/20914c0f075f91df3579ffbdf5180b02.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/Wap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Cache/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Data/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_11_30.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_01.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_04.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_05.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_06.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_07.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Admin/16_12_11.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_11_30.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_01.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_04.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_05.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_06.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_07.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Common/16_12_11.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_11_30.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_01.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_04.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_05.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_06.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_07.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Home/16_12_11.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/Wap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Logs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/Temp/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Runtime/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Common/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Conf/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Conf/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Controller/IndexController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Controller/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/Model/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/View/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/Wap/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thinkphp_qiuqiu/Application/index.html" />
+    </list>
+    <ignored path="html5-qiuqiu.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="html5-qiuqiu" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1057" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-qiuqiu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-qiuqiu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5-qiuqiu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bf9a728-e31d-4cb7-915b-96303a7d1d09" name="Default" comment="" />
+      <created>1481449950311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1481449950311</updated>
+      <workItem from="1481449951544" duration="2890000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2890000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1932" height="1057" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>
