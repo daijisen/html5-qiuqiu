@@ -1,54 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>phone</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
-    <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'/>
-    <script src="js/jquery-2.2.2.js"></script>
-    <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <script type='text/javascript' src='scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='scripts/jquery.easing.1.3.js'></script>
-    <script type='text/javascript' src='scripts/camera.min.js'></script>
-    <link rel="stylesheet" href="css/themes/blue.css" />
-    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/sm.min.css">
+    <script type='text/javascript' src="js/zepto.min.js" charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <link rel="stylesheet" href="css/sm.min,sm-extend.min.css">
+    <script type='text/javascript' src='js/sm.min,sm-extend.min.js' charset='utf-8'></script>
+    <script src="icon/iconfont.js"></script>
+
 </head>
 <body>
-<div data-role=“page” id="Account security">
-    <div data-role="header" data-position="fixed">
-        <a href="Account security.html" data-role="button" class="ui-btn ui-corner-all ui-icon-carat-l ui-btn-icon-notext"></a>
-        <h1>绑定手机</h1>
+<div class="page-group">
+<div class="page">
+    <header class="bar bar-nav">
+        <a href="Account security.html" class="icon icon-left pull-left" rel="external"></a>
+        <h1 class="title">绑定手机</h1>
+    </header>
+    <div class="content">
+        <div class="list-block">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-password"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">请输入密码：</div>
+                            <div class="item-input">
+                                <input type="password" placeholder="6-12个字符，区分大小写" class="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">输入手机号：</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="Your phone">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="phone.html" class="button button-big button-fill button-danger"rel="external">取消</a></div>
+                    <div class="col-50"><a href="Account security.html" class="button button-big button-fill button-success"rel="external">绑定</a></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div data-role="main" class="ui-content">
+</div>
 
-
-        <form method="post" action="demoform.asp">
-            <label for="pswd"  >请输入密码：</label>
-            <input type="password" name="passw" id="pswd" data-clear-btn="true"  placeholder="6-12个字符，区分大小写">
-
-        </form>
-        <form method="post" action="demoform.php">
-            <label for="fname">请输入手机号：</label>
-            <input type="text" name="fname" id="fname">
-        </form>
-            <li>    <a href="#myPopup" data-rel="popup" > <input type="submit" data-inline="true" value="提交"></a>
-
-                <div data-role="popup" id="myPopup" class="ui-content">
-                    <h3>确定绑定手机号</h3>
-                    <p>
-                        <a href="Account security.html" class="ui-btn ui-btn-inline" rel="external">是</a>
-                        <a href="phone.html" class="ui-btn ui-btn-inline" rel="external">否</a>
-                    </p>
-                </div></li>
-
-
-
-    </div>
-
-    <div data-dole="footer">
-    </div>
+<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
 </div>
 </body>
 </html>
