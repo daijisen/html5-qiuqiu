@@ -4,13 +4,19 @@ use Think\Controller;
 class UserController extends Controller {
 
     public function index(){
+
+        $userModel = M('users');
+         // 取到所有对象
+        $data = $userModel -> select();
+        //分配数据
+        $data = $this->assign('users',$data);
     	$this->display();
     }
     /*
 	* 添加数据
     */
     public function create(){
-    	// 1、分配客房分类数据
+    	// 1、分配用户分类数据
 
     	// 实例化User模型
     	$categoryModel = M('users');
