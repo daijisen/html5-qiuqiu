@@ -68,7 +68,7 @@ class UserController extends Controller {
     }
 
     public function destory(){
-        $rid = I('pid');
+        $pid = I('pid');
         $roomModel = M('users');
         if($roomModel->where("pid=$pid")->delete())
         {
