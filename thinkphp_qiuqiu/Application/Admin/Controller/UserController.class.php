@@ -7,9 +7,22 @@ class UserController extends Controller {
 
         $userModel = M('users');
          // 取到所有对象
-        $data = $userModel -> select();
+
+
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+         $list = $userModel->order('pid')->page($_GET['p'].',2')->select();
+         $this->assign('list',$list);
+         // 赋值数据集
+         $count = $userModel->count();
+         // 查询满足要求的总记录数
+         $Page = new \Think\Page($count,2);
+         // 实例化分页类 传入总记录数和每页显示的记录数
+         $show = $Page->show();
+         // 分页显示输出
+         $this->assign('page',$show);
+         // 输出模板带入查询条件
+
         //分配数据
-        $data = $this->assign('users',$data);
     	$this->display();
     }
     /*
@@ -67,10 +80,12 @@ class UserController extends Controller {
         }
     }
 
+
+
     public function destory(){
         $pid = I('pid');
-        $roomModel = M('users');
-        if($roomModel->where("pid=$pid")->delete())
+        $userModel = M('users');
+        if($userModel->where("pid=$pid")->delete())
         {
             $this->success('数据删除成功!');
         }
