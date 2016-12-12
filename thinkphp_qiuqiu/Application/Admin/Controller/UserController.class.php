@@ -48,19 +48,17 @@ class UserController extends Controller {
     }
 
     public function edit(){
-        $rid = I('id');
-        $usersModel = M('users');
-        $select=$usersModel->join('categorys ON rooms.cid = categorys.id')->select();
-        $data = $roomModel->find($rid);
-        $this->assign('rooms',$data);
-        $this->assign('select',$select);
+            $pid = I('pid');
+            $userModel = M('users');
+            $data = $userModel->find($pid);
+            $this->assign('users',$data);
         $this->display();
     }
 
     public function update(){
-        $roomModel = M('users');
-        $data = $roomModel->create();
-        if($roomModel->save($data))
+        $userModel = M('users');
+        $data = $userModel->create();
+        if($userModel->save($data))
         {
             $this->success('数据更新成功！','index');
         }
