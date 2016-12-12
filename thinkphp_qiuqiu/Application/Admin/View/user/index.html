@@ -39,7 +39,7 @@
                             <th>性别</th>
                             <th>操作</th>
                         </tr>
-                        <volist name="users" id="vo">
+                        <volist name="list" id="vo">
                         <tr>
                             <td class="tc"><input name="id[]" value="{$vo.pid}}" type="checkbox"></td>
                             <td>
@@ -61,7 +61,7 @@
                         </tr>
                         </volist>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> {$page}</div>
                 </div>
             </form>
         </div>
