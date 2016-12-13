@@ -18,10 +18,10 @@
             </div>
         </div>
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
+            <form name="myform" id="myform" method="post" action="{:U('Admin/user/destoryBatch')}">
                 <div class="result-title">
                     <div class="result-list">
-                        <a id="batchDel" href="{:U('Admin/user/destory')}"><i class="icon-font"></i>批量删除</a>
+                        <button id="batchDel"  type="submit"><i class="icon-font"></i>批量删除</button>
                         <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                         </tr>
                         <volist name="list" id="vo">
                         <tr>
-                            <td class="tc"><input name="id[]" value="{$vo.pid}}" type="checkbox"></td>
+                            <td class="tc"><input name="id[]" value="{$vo.pid}" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="{$vo.pid}" type="hidden">
                                 <input class="common-input sort-input" name="ord[]" value="{$vo.pid}" type="text">
