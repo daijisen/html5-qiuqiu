@@ -71,7 +71,8 @@ class UserController extends Controller {
     public function update(){
         $userModel = M('users');
         $data = $userModel->create();
-        dump($userModel->save($data));
+
+        dump($data);
         if($userModel->save($data) )
         {
             $this->success('数据更新成功！','index');
