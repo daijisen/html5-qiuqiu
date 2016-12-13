@@ -10,7 +10,7 @@ class UserController extends Controller {
 
 
         // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-         $list = $userModel->order('pid')->page($_GET['p'].',4')->select();
+         $list = $userModel->order('pid desc')->page($_GET['p'],'4')->select();
          $this->assign('list',$list);
          // 赋值数据集
          $count = $userModel->count();
