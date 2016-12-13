@@ -73,6 +73,9 @@ class UserController extends Controller {
              };
 
          }
+         $time = date("Y-m-d H:i:s");
+         $data['time'] = $time;
+
 
 
 
