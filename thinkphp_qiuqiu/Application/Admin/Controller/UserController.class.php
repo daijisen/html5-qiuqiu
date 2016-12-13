@@ -65,13 +65,14 @@ class UserController extends Controller {
             $userModel = M('users');
             $data = $userModel->find($pid);
             $this->assign('users',$data);
-        $this->display();
+            $this->display();
     }
 
     public function update(){
         $userModel = M('users');
         $data = $userModel->create();
-        if($userModel->save($data))
+        dump($userModel->save($data));
+        if($userModel->save($data) )
         {
             $this->success('数据更新成功！','index');
         }
