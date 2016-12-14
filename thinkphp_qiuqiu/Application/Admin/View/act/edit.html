@@ -1,0 +1,71 @@
+<layout name="layout_admin" />
+    <!--/sidebar-->
+    <div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allCategorys.html">所有活动</a><span class="crumb-step">&gt;</span><span>添加活动</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form action="{:U('Admin/act/store')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th width="120">用户ID:</th>
+                                <td>
+
+                                    <select name="pid" id="select">
+                                        <volist name="acts" id="vo">
+                                            <option value="20">{$vo.pid}</option>
+                                        </volist>
+                                    </select>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th width="120">类型:</th>
+                                <td>
+
+                                    <select name="class" id="select">
+                                        <option value="20">排球</option>
+                                        <option value="20">足球</option>
+                                        <option value="20">篮球</option>
+                                        <option value="20">羽毛球</option>
+                                        <option value="20">台球</option>
+                                        <option value="20">网球</option>
+                                        <option value="20">棒球</option>
+                                        <option value="20">乒乓球</option>
+                                    </select>
+
+                                </td>
+                            </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>时间段</th>
+                            <td>
+                                <input class="common-text required" id="title" name="timeslot" size="50" value="{$acts.password}" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><i class="require-red">*</i>配图</th>
+                            <td>
+                            <input type="file" name="uploadpic" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>内容</th>
+                            <td><textarea name="ncontent" class="common-textarea" id="content" cols="10" style="width: 98%;" rows="10" value="{$acts.ncontent}"></textarea></td>
+                        </tr>
+                            <th></th>
+                            <td>
+                                <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                            </td>
+                        </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--/main-->

@@ -7,115 +7,47 @@
         </div>
 
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
-
+            <form name="myform" id="myform" method="post" action="{:U('Admin/act/destoryBatch')}">
+                <div class="result-title">
+                    <div class="result-list">
+                        <button id="batchDel"  type="submit"><i class="icon-font"></i>批量删除</button>
+                    </div>
+                </div>
                 <div class="result-content">
                     <table class="result-tab" width="100%">
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
-                            <th>ID</th>
-                            <th>用户名</th>
-                            <th>标签</th>
-                            <th>头像</th>
+                            <th>用户ID</th>
+                            <th>类型</th>
+                            <th>时间段</th>
                             <th>发布时间</th>
                             <th>内容</th>
                             <th>配图</th>
                             <th>编辑</th>
                         </tr>
+                        <volist name="list" id="vo">
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                                <input class="common-input sort-input" name="ord[]" value="{$vo.aid}" type="text">
                             </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{$vo.pid}</td>
+                            <td>{$vo.class}</td>
+                            <td>{$vo.timeslot}</td>
+                            <td>{$vo.sendtime}</td>
+                            <td>{$vo.ncontent}</td>
+                            <td width="80px"><img src="__PUBLIC__/uploads{$vo.uploadpic}" height="80px" width="80px"></td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="{:U('Admin/act/edit')}/aid/{$vo.aid}">修改</a>
+                                <a class="link-del" href="{:U('Admin/act/edit')}/aid/{$vo.aid}">删除</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                       </volist>
 
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> {$page}</div>
                 </div>
             </form>
         </div>
