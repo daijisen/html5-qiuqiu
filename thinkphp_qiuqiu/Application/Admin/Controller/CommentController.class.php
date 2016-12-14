@@ -8,7 +8,6 @@ class CommentController extends Controller {
             $commentModel = M('comments');
              // 取到所有对象
 
-
             // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
              $list = $commentModel->order('comid desc')->page($_GET['p'],'4')->select();
              $this->assign('list',$list);
@@ -69,7 +68,7 @@ class CommentController extends Controller {
         public function destory(){
             $comid = I('comid');
             $commentModel = M('comments');
-            if($userModel->where("pid=$pid")->delete())
+            if($commentModel->where("comid=$comid")->delete())
             {
                 $this->success('数据删除成功!');
             }
