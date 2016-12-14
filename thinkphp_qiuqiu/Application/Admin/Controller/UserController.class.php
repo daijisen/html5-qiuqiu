@@ -29,16 +29,7 @@ class UserController extends Controller {
 	* 添加数据
     */
     public function create(){
-    	// 1、分配用户分类数据
 
-    	// 实例化User模型
-    	$categoryModel = M('users');
-    	// 取到所有对象
-    	$data = $categoryModel -> select();
-    	//分配数据
-    	$data = $this->assign('users',$data);
-
-    	//2、显示视图文件
     	$this->display();
     }
 	/*
@@ -159,9 +150,7 @@ class UserController extends Controller {
         $pid = I('pid');
         $userModel = M('users');
         $data = $userModel->where("pid=$pid")->select();
-        dump($data[0]['head']);
         $image = "./Public/uploads".$data[0]['head'];
-        dump($image);
 
         if(unlink($image) && $userModel->where("pid=$pid")->delete())
         {
