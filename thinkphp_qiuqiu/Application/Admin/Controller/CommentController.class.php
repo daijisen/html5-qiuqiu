@@ -2,116 +2,86 @@
 namespace Admin\Controller;
 use Think\Controller;
 class CommentController extends Controller {
-    public function index(){
-    	//1、获取数据
-    	$categoryModel = M('categorys');
-    	$categorys = $categoryModel -> select();
-    	//2、分配数据
-    	$this->assign('categorys',$categorys);
-    	//3、显示视图
-    	$this->display();
-    }
 
-    //显示添加数据的模板
-    public function create(){	
-    	$this->display();
-    }
+        public function index(){
 
-    public function allhuifu(){
-        	//1、获取数据
-        	$categoryModel = M('categorys');
-        	$categorys = $categoryModel -> select();
-        	//2、分配数据
-        	$this->assign('categorys',$categorys);
-        	//3、显示视图
+            $commentModel = M('comments');
+             // 取到所有对象
+
+
+            // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+             $list = $commentModel->order('comid desc')->page($_GET['p'],'4')->select();
+             $this->assign('list',$list);
+             // 赋值数据集
+             $count = $commentModel->count();
+             // 查询满足要求的总记录数
+             $Page = new \Think\Page($count,4);
+             // 实例化分页类 传入总记录数和每页显示的记录数
+             $show = $Page->show();
+             // 分页显示输出
+             $this->assign('page',$show);
+             // 输出模板带入查询条件
+
+            //分配数据
         	$this->display();
         }
 
 
 
-    public function store(){
-        $upload = new \Think\Upload();// 实例化上传类
-        $upload->maxSize=3145728 ;// 设置附件上传大小
-        $upload->exts=array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-        $upload->rootPath  = THINK_PATH; // 设置附件上传根目录
-        $upload->savePath  ='../Public/uploads/'; // 设置附件上传（子）目录
-        // 上传文件 
-        $info   =   $upload->upload();
-        if(!$info) {// 上传错误提示错误信息
-            $this->error($upload->getError());
-        }else{// 上传成功
-            //$this->success('上传成功！');
-            //创建模型
-            $categoryModel = M('categorys');
-            //组织数据
-            $data = $categoryModel->create();
-
-            //设置thumb字段属性(目录+名字)
-            $data['thumb']=$info['thumb']['savepath'].$info['thumb']['savename'];   
-            //添加
-            if($categoryModel->add($data)){
-                $this->success('数据添加成功', 'index');
-            }else{
-                $this->showError('数据添加失败');
-            }
+        public function store(){
+        	//生成模型对象
+        	$commentModel = M('comments');
+        	// 根据表单提交的POST数据创建数据对象
+        	$data = $commentModel->create();
+             $time = date("Y-m-d H:i:s");
+             $data['time'] = $time;
+        	if($commentModel->add($data))
+        	{
+                 $this->success('数据添加成功','index');
+        	}
+        	else{
+        		$this->error('数据添加失败');
+        	}
         }
-    
-    }
 
-    public function edit(){
-    	//获取id
-    	$id = I('id');
-    	//获取数据
-    	$categoryModel = M('categorys');
-    	$data = $categoryModel->find($id);
 
-    	//分配数据
-    	$this->assign('category',$data);
-    	$this->display();
-    }
-    public function update(){
-        $upload = new \Think\Upload();// 实例化上传类
-        $upload->maxSize=3145728 ;// 设置附件上传大小
-        $upload->exts=array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-        $upload->rootPath  = THINK_PATH; // 设置附件上传根目录
-        $upload->savePath  ='../Public/uploads/'; // 设置附件上传（子）目录
-        // 上传文件 
-        $info   =   $upload->upload();
-        if(!$info) {// 上传错误提示错误信息
-            $this->error($upload->getError());
-        }else{// 上传成功
-            //$this->success('上传成功！');
-            //创建模型
-            $categoryModel = M('categorys');
-            //组织数据
-            $data = $categoryModel->create();
+         public function destoryBatch(){
+                $commentModel = M('comments');
+               $getid = I('id'); //获取选择的复选框的值
 
-            //设置thumb字段属性(目录+名字)
-            $data['thumb']=$info['thumb']['savepath'].$info['thumb']['savename'];
-        
-            //添加
-            if($categoryModel->save($data)){
-                $this->success('数据更新成功', 'index');
-            }else{
-                $this->showError('数据更新失败');
+               if (!$getid) $this->error('未选择记录'); //没选择就提示信息
+
+               $getids = implode(',', $getid); //选择一个以上，就用,把值连接起来(1,2,3)这样
+
+               $id = is_array($getid) ? $getids : $getid; //如果是数组，就把用,连接起来的值覆给$id,否则就覆获取到的没有,号连接起来的值
+
+               if($commentModel->where("comid IN ($id )")->delete())
+               {
+                     $this->success('数据删除成功!');
+               }
+               else{
+                     $this->error('数据删除失败！');
+               }
+
+
             }
-        }
-    }
 
-    public function destory(){
-    		$id = I('id');
-    		// 实例化User对象
-    		$categoryModel = M('categorys');
-    		// 删除id为$id的用户数据
-    		if($categoryModel->where("id=$id")->delete())
-    		{
-    			$this->success('删除成功');
-    		}
-    		else
-    		{
-    			$this->error('删除失败');
-    		}
-    }
+        public function destory(){
+            $comid = I('comid');
+            $commentModel = M('comments');
+            if($userModel->where("pid=$pid")->delete())
+            {
+                $this->success('数据删除成功!');
+            }
+            else{
+                $this->error('数据删除失败！');
+            }
+
+        }
+
+
+
+
 
 
 }
