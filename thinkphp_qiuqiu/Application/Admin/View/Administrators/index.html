@@ -1,0 +1,63 @@
+<layout name="layout_admin" />
+<div class="main-wrap">
+
+        <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">管理员列表</span></div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-content">
+                <form action="/jscss/admin/design/index" method="post">
+                    <table class="search-tab">
+                        <tr>
+                            <th width="70">关键字:</th>
+                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
+                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="result-wrap">
+            <form name="myform" id="myform" method="post" action="{:U('Admin/administrators/destoryBatch')}">
+                <div class="result-title">
+                    <div class="result-list">
+                        <button id="batchDel"  type="submit"><i class="icon-font"></i>批量删除</button>
+                    </div>
+                </div>
+                <div class="result-content">
+                    <table class="result-tab" width="100%">
+                        <tr>
+                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>密码</th>
+                            <th>头像</th>
+                            <th>注册时间</th>
+                            <th>性别</th>
+                            <th>操作</th>
+                        </tr>
+                        <volist name="list" id="vo">
+                        <tr>
+                            <td class="tc"><input name="id[]" value="{$vo.pid}" type="checkbox"></td>
+                            <td>
+                                <input name="ids[]" value="{$vo.pid}" type="hidden">
+                                <input class="common-input sort-input" name="ord[]" value="{$vo.pid}" type="text">
+                            </td>
+                            <td>{$vo.username}</td>
+                            <td> {$vo.password}</td>
+                            <td width="80px"><img src="__PUBLIC__/uploads{$vo.head}" height="80px" width="80px"></td>
+                            <td>{$vo.time}</td>
+                            <td>{$vo.gender}</td>
+                            <td>
+                                <a class="link-update" href="{:U('Admin/administrators/edit')}/pid/{$vo.pid}">修改</a>
+                                <a class="link-del" href="{:U('Admin/administrators/destory')}/pid/{$vo.pid}">删除</a>
+                            </td>
+                        </tr>
+                        </volist>
+                    </table>
+                    <div class="list-page"> {$page}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--/main-->

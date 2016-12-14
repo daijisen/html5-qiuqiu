@@ -1,0 +1,51 @@
+<layout name="layout_admin" />
+<div class="main-wrap">
+
+    <div class="crumb-wrap">
+        <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allRooms.html">管理员列表</a><span class="crumb-step">&gt;</span><span>添加管理员</span></div>
+    </div>
+    <div class="result-wrap">
+        <div class="result-content">
+            <form action="{:U('Admin/user/update')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <table class="insert-tab" width="100%">
+                    <tbody>
+                    <tr>
+
+                        <th width="120"><i class="require-red">*</i>管理员姓名</th>
+                        <input name="pid"  value="{$users.pid}" type="hidden">
+                        <td>
+                            <input class="common-text required" id="title" name="username" size="50" value="{$users.username}" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>密码</th>
+                        <td>
+                            <input class="common-text required" id="title" name="password" size="50" value="{$users.password}" type="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>头像</th>
+                        <td><input type="file" name="headpic" /></td>
+
+                    </tr>
+                    <tr>
+                        <th><i class="require-red">*</i>邮箱</th>
+                        <td>
+                            <input class="common-text required" id="title" name="email" size="50" value="{$users.email}" type="text">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th></th>
+                        <td>
+                            <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                            <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </form>
+        </div>
+    </div>
+
+</div>
+<!--/main-->
