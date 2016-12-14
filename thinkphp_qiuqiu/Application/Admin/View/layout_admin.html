@@ -45,7 +45,7 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#" style="color: #5DD300">管理员</a></li>
+                <li><a href="#" style="color: #5DD300">超级管理员</a></li>
                 <li><a href="#">修改密码</a></li>
                 <li><a href="#">退出</a></li>
             </ul>
@@ -59,6 +59,13 @@
         </div>
         <div class="sidebar-content">
             <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>管理员列表</a>
+                    <ul class="sub-menu">
+                        <li><a href="{:U('Admin/administrators/index')}"><i class="icon-font">&#xe008;</i>所有管理员</a></li>
+                        <li><a href="{:U('Admin/administrators/create')}"><i class="icon-font">&#xe005;</i>添加管理员</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
                     <ul class="sub-menu">
