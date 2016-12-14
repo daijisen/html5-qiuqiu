@@ -29,16 +29,7 @@ class UserController extends Controller {
 	* 添加数据
     */
     public function create(){
-    	// 1、分配用户分类数据
 
-    	// 实例化User模型
-    	$categoryModel = M('users');
-    	// 取到所有对象
-    	$data = $categoryModel -> select();
-    	//分配数据
-    	$data = $this->assign('users',$data);
-
-    	//2、显示视图文件
     	$this->display();
     }
 	/*
@@ -49,16 +40,45 @@ class UserController extends Controller {
     	$usersModel = M('users');
     	// 根据表单提交的POST数据创建数据对象
     	$data = $usersModel->create();
-    	//dump($data);
-    	//exit;
+
+    	//上传图片
+
+        $upload = new \Think\Upload();
+        // 实例化上传类
+        $upload->maxSize = 3145728 ;
+        // 设置附件上传大小
+        $upload->ext  = array('jpg', 'gif', 'png', 'jpeg');
+        // 设置附件上传类型
+        $upload->rootPath = './Public/uploads/';
+         // 设置附件上传根目录
+        $upload->savePath = '/headPic/';
+         // 设置附件上传（子）目录 // 上传文件
+        $info = $upload->upload();
+
+        if(!$info) {
+                          $this->error($upload->getError());
+        }else{
+            // 上传成功
+             foreach($info as $file){
+                $data["head"] = $file['savepath'].$file['savename'];
+             };
+
+         }
+         $time = date("Y-m-d H:i:s");
+         $data['time'] = $time;
+
+
+
+
     	if($usersModel->add($data))
     	{
-    		$this->success('数据添加成功','index');
+             $this->success('数据添加成功','index');
     	}
     	else{
     		$this->error('数据添加失败');
     	}
     }
+
 
     public function edit(){
             $pid = I('pid');
@@ -72,7 +92,30 @@ class UserController extends Controller {
         $userModel = M('users');
         $data = $userModel->create();
 
-        dump($data);
+        //上传图片
+
+                $upload = new \Think\Upload();
+                // 实例化上传类
+                $upload->maxSize = 3145728 ;
+                // 设置附件上传大小
+                $upload->ext  = array('jpg', 'gif', 'png', 'jpeg');
+                // 设置附件上传类型
+                $upload->rootPath = './Public/uploads/';
+                 // 设置附件上传根目录
+                $upload->savePath = '/headPic/';
+                 // 设置附件上传（子）目录 // 上传文件
+                $info = $upload->upload();
+
+                if(!$info) {
+                                  $this->error($upload->getError());
+                }else{
+                    // 上传成功
+                     foreach($info as $file){
+                        $data["head"] = $file['savepath'].$file['savename'];
+                     };
+
+                 }
+
         if($userModel->save($data) )
         {
             $this->success('数据更新成功！','index');
@@ -106,7 +149,10 @@ class UserController extends Controller {
     public function destory(){
         $pid = I('pid');
         $userModel = M('users');
-        if($userModel->where("pid=$pid")->delete())
+        $data = $userModel->where("pid=$pid")->select();
+        $image = "./Public/uploads".$data[0]['head'];
+
+        if(unlink($image) && $userModel->where("pid=$pid")->delete())
         {
             $this->success('数据删除成功!');
         }
