@@ -89,6 +89,11 @@ class ActController extends Controller {
 
 
         public function edit(){
+
+                $userModel = M('users');
+                $data1 = $userModel->select();
+                $this->assign('users',$data1);
+
                 $aid = I('aid');
                 $actModel = M('acts');
                 $data = $actModel->find($aid);
@@ -112,21 +117,20 @@ class ActController extends Controller {
                      // 设置附件上传根目录
                     $upload->savePath = '/actPic/';
                      // 设置附件上传（子）目录 // 上传文件
-                    $info = $upload->upload();
-
-                    if(!$info) {
-                                      $this->error($upload->getError());
-                    }else{
+                     $info = $upload->upload();
+                     if(!$info) {
+                        $this->error($upload->getError());
+                     }else{
                         // 上传成功
-                         foreach($info as $file){
+                        foreach($info as $file){
                             $data["uploadpic"] = $file['savepath'].$file['savename'];
-                         };
 
+                        };
                      }
 
             if($actModel->save($data) )
             {
-                $this->success('数据更新成功！','index');
+                 $this->success('数据更新成功！','index');
             }
             else{
                 $this->error('数据更新失败');
@@ -159,13 +163,16 @@ class ActController extends Controller {
             $actModel = M('acts');
             $data = $actModel->where("aid=$aid")->select();
             $image = "./Public/uploads".$data[0]['uploadpic'];
-
-            if(unlink($image) && $userModel->where("aid=$aid")->delete())
+            if($actModel->where("aid=$aid")->delete())
             {
-                $this->success('数据删除成功!');
+                if(unlink($image) ){
+                    $this->success('删除成功!');
+                }else{
+                    $this->success('没有图片可删或者图片删除失败!');
+                }
             }
             else{
-                $this->error('数据删除失败！');
+                $this->error('删除失败！');
             }
 
         }
