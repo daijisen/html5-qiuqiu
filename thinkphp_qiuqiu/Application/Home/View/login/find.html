@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>找回密码 - 求球 - Thousands Find</title>
-	<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/style/register-login.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/front/css/register-login.css">
 </head>
 <body>
 <div id="box"></div>
@@ -25,7 +25,7 @@
 					<input type="text" name="user" id="user" class="ipt" placeholder="您绑定的邮箱" required>
 				</div>  
                                 <div class="group-ipt user">
-					<input type="text" name="user" id="user" class="ipt" placeholder="您的大学名称" required>
+					<input type="text1" name="user1" id="user1" class="ipt1" placeholder="您的大学名称" required>
 				</div>
 			
 
@@ -33,7 +33,7 @@
 		</div>
 
 		<div class="button">
-			<a href="{:U('Home/login/finished')}"><button type="submit" class="login-btn register-btn" id="button">找回密码</button></a>
+			<a href="finished.html"><button type="submit" class="login-btn register-btn" id="button">找回密码</button></a>
 		</div>
 	</div>
 </div>
@@ -47,7 +47,7 @@
 <script src='__PUBLIC__/front/js/background.js' type="text/javascript"></script>
 <script src='__PUBLIC__/front/js/jquery.min.js' type="text/javascript"></script>
 <script src='__PUBLIC__/front/js/layer/layer.js' type="text/javascript"></script>
-<script src='__PUBLIC__/front/js/index.js' type="text/javascript"></script>
+<script src='__PUBLIC__/front/js/index1.js' type="text/javascript"></script>
 <script>
 	$('.imgcode').hover(function(){
 		layer.tips("a", '.verify', {
@@ -91,6 +91,23 @@
 		}
 	})
 </script>
-
+<script>
+	$(document).ready(function(){
+		$(".button").click(function(){ 
+			if($(".email").val().length==0){ 
+				alert("请输入账号");
+			}
+			else if($(".text").val().length==0){ 
+				alert("请输入邮箱");
+			}
+                        else if($(".text1").val().length==0){ 
+				alert("请输入大学");
+			}
+			else{ 
+				alert("正在核对数据");
+			}
+		});
+	}); 
+</script>
 </body>
 </html>
