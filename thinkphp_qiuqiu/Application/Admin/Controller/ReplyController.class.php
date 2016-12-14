@@ -10,7 +10,6 @@ class ReplyController extends Controller {
 
             // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
              $list = $replyModel->order('repid desc')->page($_GET['p'],'4')->select();
-             dump($list);
              $this->assign('list',$list);
              // 赋值数据集
              $count = $replyModel->count();
