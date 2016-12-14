@@ -1,19 +1,19 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
-class UserController extends Controller {
+class AdministratorsController extends Controller {
 
     public function index(){
 
-        $userModel = M('users');
+        $administratorsModel = M('administrators');
          // 取到所有对象
 
 
         // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-         $list = $userModel->order('pid desc')->page($_GET['p'],'4')->select();
+         $list = $administratorsModel->order('pid desc')->page($_GET['p'],'4')->select();
          $this->assign('list',$list);
          // 赋值数据集
-         $count = $userModel->count();
+         $count = $administratorsModel->count();
          // 查询满足要求的总记录数
          $Page = new \Think\Page($count,4);
          // 实例化分页类 传入总记录数和每页显示的记录数
@@ -37,9 +37,9 @@ class UserController extends Controller {
     */
     public function store(){
     	//生成模型对象
-    	$usersModel = M('users');
+    	$administratorsModel = M('administrators');
     	// 根据表单提交的POST数据创建数据对象
-    	$data = $usersModel->create();
+    	$data = $administratorsModel->create();
 
     	//上传图片
 
@@ -51,7 +51,7 @@ class UserController extends Controller {
         // 设置附件上传类型
         $upload->rootPath = './Public/uploads/';
          // 设置附件上传根目录
-        $upload->savePath = '/headPic/';
+        $upload->savePath = '/aheadPic/';
          // 设置附件上传（子）目录 // 上传文件
         $info = $upload->upload();
 
@@ -70,7 +70,7 @@ class UserController extends Controller {
 
 
 
-    	if($usersModel->add($data))
+    	if($administratorsModel->add($data))
     	{
              $this->success('数据添加成功','index');
     	}
@@ -82,15 +82,15 @@ class UserController extends Controller {
 
     public function edit(){
             $pid = I('pid');
-            $userModel = M('users');
-            $data = $userModel->find($pid);
+            $administratorsModel = M('users');
+            $data = $administratorsModel->find($pid);
             $this->assign('users',$data);
             $this->display();
     }
 
     public function update(){
-        $userModel = M('users');
-        $data = $userModel->create();
+        $administratorsModel = M('administrators');
+        $data = $administratorsModel->create();
 
         //上传图片
 
@@ -102,7 +102,7 @@ class UserController extends Controller {
                 // 设置附件上传类型
                 $upload->rootPath = './Public/uploads/';
                  // 设置附件上传根目录
-                $upload->savePath = '/headPic/';
+                $upload->savePath = '/aheadPic/';
                  // 设置附件上传（子）目录 // 上传文件
                 $info = $upload->upload();
 
@@ -116,7 +116,7 @@ class UserController extends Controller {
 
                  }
 
-        if($userModel->save($data) )
+        if($administratorsModel->save($data) )
         {
             $this->success('数据更新成功！','index');
         }
@@ -126,7 +126,7 @@ class UserController extends Controller {
     }
 
      public function destoryBatch(){
-            $userModel = M('users');
+            $administratorsModel = M('administrators');
            $getid = I('id'); //获取选择的复选框的值
 
            if (!$getid) $this->error('未选择记录'); //没选择就提示信息
@@ -135,7 +135,7 @@ class UserController extends Controller {
 
            $id = is_array($getid) ? $getids : $getid; //如果是数组，就把用,连接起来的值覆给$id,否则就覆获取到的没有,号连接起来的值
 
-           if($userModel->where("pid IN ($id )")->delete())
+           if($administratorsModel->where("pid IN ($id )")->delete())
            {
                  $this->success('数据删除成功!');
            }
@@ -148,11 +148,11 @@ class UserController extends Controller {
 
     public function destory(){
         $pid = I('pid');
-        $userModel = M('users');
-        $data = $userModel->where("pid=$pid")->select();
+        $administratorsModel = M('administrators');
+        $data = $administratorsModel->where("pid=$pid")->select();
         $image = "./Public/uploads".$data[0]['head'];
 
-        if(unlink($image) && $userModel->where("pid=$pid")->delete())
+        if(unlink($image) && $administratorsModel->where("pid=$pid")->delete())
         {
             $this->success('数据删除成功!');
         }
