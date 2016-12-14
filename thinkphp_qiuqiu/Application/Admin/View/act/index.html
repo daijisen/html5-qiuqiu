@@ -28,7 +28,7 @@
                         </tr>
                         <volist name="list" id="vo">
                         <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                            <td class="tc"><input name="id[]" value="{$vo.aid}" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
                                 <input class="common-input sort-input" name="ord[]" value="{$vo.aid}" type="text">
@@ -41,7 +41,7 @@
                             <td width="80px"><img src="__PUBLIC__/uploads{$vo.uploadpic}" height="80px" width="80px"></td>
                             <td>
                                 <a class="link-update" href="{:U('Admin/act/edit')}/aid/{$vo.aid}">修改</a>
-                                <a class="link-del" href="{:U('Admin/act/edit')}/aid/{$vo.aid}">删除</a>
+                                <a class="link-del" href="{:U('Admin/act/destory')}/aid/{$vo.aid}">删除</a>
                             </td>
                         </tr>
                        </volist>

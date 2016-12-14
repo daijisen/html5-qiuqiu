@@ -7,16 +7,18 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="{:U('Admin/act/store')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="{:U('Admin/act/update')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
                             <tr>
                                 <th width="120">用户ID:</th>
+                                <input name="aid"  value="{$acts.aid}" type="hidden">
                                 <td>
 
-                                    <select name="pid" id="select">
-                                        <volist name="acts" id="vo">
-                                            <option value="20">{$vo.pid}</option>
+                                    <select name="pid" id="userid" value="{$acts.pid}">
+                                        <volist name="users" id="vo">
+                                            <option value="{$acts.pid}">{$acts.pid}</option>
+                                            <option value="{$vo.pid}">{$vo.pid}</option>
                                         </volist>
                                     </select>
 
@@ -27,15 +29,16 @@
                                 <th width="120">类型:</th>
                                 <td>
 
-                                    <select name="class" id="select">
-                                        <option value="20">排球</option>
-                                        <option value="20">足球</option>
-                                        <option value="20">篮球</option>
-                                        <option value="20">羽毛球</option>
-                                        <option value="20">台球</option>
-                                        <option value="20">网球</option>
-                                        <option value="20">棒球</option>
-                                        <option value="20">乒乓球</option>
+                                    <select name="class" id="select" >
+                                        <option value="{$acts.class}">{$acts.class}</option>
+                                        <option value="排球">排球</option>
+                                        <option value="足球">足球</option>
+                                        <option value="篮球">篮球</option>
+                                        <option value="羽毛球">羽毛球</option>
+                                        <option value="台球">台球</option>
+                                        <option value="网球">网球</option>
+                                        <option value="棒球">棒球</option>
+                                        <option value="乒乓球">乒乓球</option>
                                     </select>
 
                                 </td>
@@ -43,7 +46,7 @@
                         <tr>
                             <th><i class="require-red">*</i>时间段</th>
                             <td>
-                                <input class="common-text required" id="title" name="timeslot" size="50" value="{$acts.password}" type="text">
+                                <input class="common-text required" id="title" name="timeslot" size="50" value="{$acts.timeslot}" type="text">
                             </td>
                         </tr>
                         <tr>
@@ -54,7 +57,7 @@
                         </tr>
                         <tr>
                             <th>内容</th>
-                            <td><textarea name="ncontent" class="common-textarea" id="content" cols="10" style="width: 98%;" rows="10" value="{$acts.ncontent}"></textarea></td>
+                            <td><textarea name="ncontent" class="common-textarea" id="content" cols="10" style="width: 98%;" rows="10" >{$acts.ncontent}</textarea></td>
                         </tr>
                             <th></th>
                             <td>
