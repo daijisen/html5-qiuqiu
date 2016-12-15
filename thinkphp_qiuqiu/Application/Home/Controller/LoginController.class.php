@@ -21,7 +21,7 @@ class LoginController extends Controller {
                     $where['username'] = $data['username'];
                     $result = $login->where($where)->field('pid,username,password')->find();
                     // 验证用户名 对比 密码
-                    if ($result && $result['password'] == $result['password']) {
+                    if ($result && $result['password'] === $data['password']) {
                         // 存储session
                         session('uid', $result['pid']);          // 当前用户id
                         session('username', $result['username']);   // 当前用户名
