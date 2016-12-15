@@ -8,7 +8,7 @@ public function index(){
         session_start();
                 if (IS_POST) {
                     // 实例化Login对象
-                    $login = D('users');
+                    $login = D('administrators');
                     // 自动验证 创建数据集
                     if (!$data = $login->create()) {
                         // 防止输出中文乱码
@@ -40,7 +40,7 @@ public function index(){
             // 判断提交方式 做不同处理
             if (IS_POST) {
                 // 实例化User对象
-                $user = D('users');
+                $user = D('administrators');
                 // 自动验证 创建数据集
                 if (!$data = $user->create()) {
                     // 防止输出中文乱码
