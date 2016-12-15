@@ -9,7 +9,7 @@ class LoginController extends Controller {
         session_start();
                 if (IS_POST) {
                     // 实例化Login对象
-                    $login = D('users');
+                    $login = D('administrators');
                     // 自动验证 创建数据集
                     if (!$data = $login->create()) {
                         // 防止输出中文乱码
