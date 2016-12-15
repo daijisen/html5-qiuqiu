@@ -82,9 +82,9 @@ class AdministratorsController extends Controller {
 
     public function edit(){
             $pid = I('pid');
-            $administratorsModel = M('users');
+            $administratorsModel = M('administrators');
             $data = $administratorsModel->find($pid);
-            $this->assign('users',$data);
+            $this->assign('administrators',$data);
             $this->display();
     }
 
