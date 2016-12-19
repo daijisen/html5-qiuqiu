@@ -148,46 +148,50 @@
 
         </nav>
         <div class="content">
-            <div class="card facebook-card">
-                <div class="card-header no-border">
-                    <div class="facebook-avatar"><img class="tx" src="__PUBLIC__/front/image/tx.jpg" width="34" height="34"></div>
-                    <div class="facebook-name">自诩</div>
-                    <div class="facebook-date">软件梅西，不服来辩</div>
-                </div>
-                <div class="card-content">
-                    <img src="__PUBLIC__/front/image/bj.jpg" width="100%">
-                    <div class="card-content-inner">
-                        <div class="content-block">
-                            <p>#<a >足球</a>#</p>
-                            <p>中午12点西操场有踢球的没？</p>
 
+            <volist name="indexdata" id="vo">
+                <div class="card facebook-card">
+                    <div class="card-header no-border">
+                        <div class="facebook-avatar"><img class="tx" src="__PUBLIC__/uploads{$vo.head}" width="34" height="34"></div>
+                        <div class="facebook-name">{$vo.username}</div>
+                        <div class="facebook-date">{$vo.signature}</div>
+                    </div>
+                    <div class="card-content">
+                        <img src="__PUBLIC__/uploads{$vo.uploadpic}" width="100%">
+                        <div class="card-content-inner">
+                            <div class="content-block">
+                                <p>#<a >{$vo.class}</a>#</p>
+                                <p>{$vo.ncontent}</p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer no-border">
-                    <a href="#" class="link">
+                    <div class="card-footer no-border">
+                        <a href="#" class="link">
 						<span class="badge">
 							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-duoseqiu"></use>
-						</svg>团队（2/10)</span>
-                    </a>
-                    <a href="#" class="link">
+						</svg>团队（{$vo.num}/10)</span>
+                        </a>
+                        <a href="#" class="link">
 						<span class="badge">
 							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-huojian"></use>
 						</svg>加入团队
 						</span>
-                    </a>
-                    <a href="#" class="link">
+                        </a>
+                        <a href="#" class="link">
 						<span class="badge">
 							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-yuhangyuan2"></use>
 						</svg>评论一波
 						</span>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            </volist>
         </div>
+
     </div>
     <!--新闻列表页--> <div class="page" id="news">
         <!-- 标题栏 -->
@@ -248,56 +252,22 @@
             </div>
             <div class="list-block media-list">
                 <ul>
-                    <li>
-                        <a href="#news-content" class="item-link item-content">
-                            <div class="item-media"><img src="__PUBLIC__/front/image/111.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">沃顿：我们想让拉塞尔打出攻击性</div>
+                    <volist name="news" id="vo">
+                        <li>
+                            <a href="#news-content" class="item-link item-content">
+                                <div class="item-media"><img src="__PUBLIC__/uploads{$vo.newpic}" style='width: 4rem;'></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{$vo.title}</div>
 
+                                    </div>
+
+                                    <div class="item-text">{$vo.ncontent}</div>
                                 </div>
+                            </a>
+                        </li>
+                    </volist>
 
-                                <div class="item-text">虽然拉塞尔昨日付出，但是可以看出来他在场上打的非常谨慎.</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="__PUBLIC__/front/image/112.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">卡莱尔称赞马刺</div>
-                                </div>
-
-                                <div class="item-text">邓肯进入联盟后，从未缺席过季后赛</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="__PUBLIC__/front/image/113.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">比尔砍下职业新高</div>
-                                </div>
-
-                                <div class="item-text">此外，也是生涯背靠背砍下30分</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="__PUBLIC__/front/image/118.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">巴特勒戴维斯获周最佳</div>
-
-                                </div>
-
-                                <div class="item-text">公牛鹈鹕均三胜一负</div>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -404,7 +374,8 @@
         </div>
 
     </div>
-    <!--发布页-->  <div class="page" id="page-fabu">
+    <!--发布页-->
+    <div class="page" id="page-fabu">
     <header class="bar bar-nav">
         <a href="#index">
             <svg class="icon pull-left" aria-hidden="true">
@@ -446,6 +417,7 @@
     </nav>
 
     <!-- 这里是页面内容区 -->
+
     <div class="content fabu"  >
         <div class="content-block">
             <div class="list-block">
@@ -456,7 +428,7 @@
                             <div class="item-inner">
 
                                 <div class="item-input">
-                                    <input type="text" placeholder="选择分类" id='picker-ball' readonly/>
+                                    <input type="text" placeholder="选择分类" id='picker-ball' name="class" readonly/>
                                 </div>
                             </div>
                         </div>
@@ -465,7 +437,7 @@
             </div>
         </div>
 
-        <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来组团吧~"></textarea>
+        <textarea  name="ncontent" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来组团吧~"></textarea>
 
     </div>
 </div>
