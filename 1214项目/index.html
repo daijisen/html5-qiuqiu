@@ -81,6 +81,22 @@
         font-size: larger;
         color: #93f7ff;
     }
+    .card-content{
+        margin-left: 12px;
+    }
+    .card-content.d5{
+
+    }
+    .card.facebook-card{
+        padding-bottom: 5px;
+    }
+    .facebook-date{
+        font-size: smaller;
+    }
+    .icon.zuqiu{
+        width:44px;
+        height: 44px;
+    }
 </style>
 <body>
 <div class="page-group">
@@ -451,7 +467,7 @@
 </div>
     <!--个人中心页--><div class="page" id="me">
         <header class="bar bar-nav">
-            <h1 class="title">求球</h1>
+            <h1 class="title" style="color: white">求球</h1>
         </header>
         <!-- 你的html代码 -->
         <!-- 这里是页面内容区 -->
@@ -460,7 +476,7 @@
                 <ul>
                     <li class="item-content">
                         <div class="item-media">
-                            <img src="image/3.png" width="50px" height="50">
+                            <img src="image/3.png" width="50px" height="50" class="tx">
                         </div>
                         <div class="item-inner">
                             <div class="item-title">酱油<br><small class="d1">简介:软件学院扛把子</small></div>
@@ -472,7 +488,7 @@
             </div>
             <div class="list-block d2">
                 <ul>
-                    <li><a href="#aboutme" class="item-content item-link">
+                    <li><a href="#callme" class="item-content item-link">
                         <div class="item-media">
                             <svg class="icon qiu" aria-hidden="true">
                                 <use xlink:href="#icon-lanqiu" class="qiu"></use>
@@ -588,6 +604,524 @@
             </a>
         </nav>
 
+    </div>
+    <!--设置-->
+    <div class="page" id="set">
+        <header class="bar bar-nav">
+            <a href="#me">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">设置</h1>
+        </header>
+        <div class="content">
+            <div class="list-block">
+                <ul><a href="#account">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">账号管理</div>
+                        </div>
+                    </li></a>
+                    <a href="#safe">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">账号安全</div>
+                        </div>
+                    </li></a>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <a href="#huancun">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">清除缓存</div>
+
+                        </div>
+                    </li>
+                    </a>
+                    <a href="#">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">检查更新</div>
+
+                        </div>
+                    </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <a href="#aboutus">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">关于我们</div>
+                        </div>
+                    </li>
+                    </a>
+                    <a href="#feedback">
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">意见反馈</div>
+                        </div>
+                    </li></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--有人叫我-->
+    <div class="page" id="callme">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a href="#me">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">有人叫我</h1>
+            <button class="button button-link button-nav pull-right">
+                刷新
+            </button>
+
+        </header>
+
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="card facebook-card">
+                <a href="#" class="d6">
+                    <div class="card-header no-border">
+                        <div class="facebook-avatar"><img src="image/3.png" width="40" height="40" class="tx"></div>
+                        <div class="facebook-name">
+                            酱油
+                        </div>
+                        <div class="facebook-date"><small>如果世界漆黑,其实我很美</small></div>
+
+                    </div>
+                </a>
+                <div class="card-content">
+                    同学，老子想要和你一起踢球！！
+                    <div class="card">
+                        <div class="card-content d5">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <a href="#"><img src="image/tx.jpg" width="55" height="55" class="tx"></a>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">软件梅西赵子旭</div>
+                                            </div>
+                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card facebook-card">
+                <a href="#" class="d6">
+                    <div class="card-header no-border">
+                        <div class="facebook-avatar"><img src="image/4.png" width="40" height="40" class="tx"></div>
+                        <div class="facebook-name">
+                            jiaomingbo
+                        </div>
+                        <div class="facebook-date"><small>你还要我怎样，要怎样</small></div>
+
+                    </div>
+                </a>
+                <div class="card-content">
+                    加入了我的队伍
+                    <div class="card">
+                        <div class="card-content d5">
+                            <div class="list-block media-list">
+                                <ul >
+                                    <li class="item-content">
+                                        <div class="item-media">
+                                            <a href="#"><img src="image/tx.jpg" width="55" height="55" class="tx"></a>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">软件梅西赵子旭</div>
+                                            </div>
+                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--日程-->
+    <div class="page" id="richeng">
+        <header class="bar bar-nav">
+            <a href="#me">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">都干了点啥</h1>
+            <button class="button button-link button-nav pull-right">
+                <a href="#richeng" style="color: white">刷新</a>
+            </button>
+
+        </header>
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="card">
+                <div class="card-header">12/5至12/11</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-boot-1" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">踢球</div>
+                                        <div class="item-after">2次</div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-basketball-jersey" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">打篮球</div>
+                                        <div class="item-after">3次</div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-paobuji" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">跑步</div>
+                                        <div class="item-after">6次</div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-xinghe" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">一共运动</div>
+                                        <div class="item-after">11次</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <svg class="icon zuqiu" aria-hidden="true">
+                        <use xlink:href="#icon-weixiao02" class="shouhui"></use>
+                    </svg>
+                    爱运动的男孩子都不会差哦
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">11/28至12/4</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-basketball-jersey" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">打篮球</div>
+                                        <div class="item-after">1次</div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-paobuji" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">跑步</div>
+                                        <div class="item-after">1次</div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-xinghe" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">一共运动</div>
+                                        <div class="item-after">2次</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <svg class="icon zuqiu" aria-hidden="true">
+                        <use xlink:href="#icon-biaoqing2" class="shouhui"></use>
+                    </svg>
+                    变懒了呢，哼~
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">12/5至12/11</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <div class="list-block">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-media">
+                                        <svg class="icon zuqiu" aria-hidden="true">
+                                            <use xlink:href="#icon-xinghe" class="shouhui"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">一共运动</div>
+                                        <div class="item-after">0次</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <svg class="icon zuqiu" aria-hidden="true">
+                        <use xlink:href="#icon-ku1" class="shouhui"></use>
+                    </svg>
+                    你这一周，都特么干了点啥！死宅真可怕~~
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--购物-->
+    <div class="page" id="shop">
+        <header class="bar bar-nav">
+            <a href="#me">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">周边商城</h1>
+        </header>
+        <div class="content"  align="center">
+            <div class="row">
+                <div class="col-33">
+                    <img src="image/羽毛球.png" width="50px" height="50px">
+                    <p> <a href="https://s.taobao.com/search?ie=utf8&initiative_id=staobaoz_20161124&stats_click=search_radio_all%3A1&js=1&imgfile=&q=%E7%BE%BD%E6%AF%9B%E7%90%83%E6%8B%8D&suggest=0_1&_input_charset=utf-8&wq=yumaoqiu&suggest_query=yumaoqiu&source=suggest"rel="external">羽毛球</a></p>
+                </div>
+                <div class="col-33">
+                    <img src="image/台球.png" width="50px" height="50px">
+                    <p> <a href="https://s.taobao.com/search?ie=utf8&initiative_id=staobaoz_20161124&stats_click=search_radio_all%3A1&js=1&imgfile=&q=%E5%8F%B0%E7%90%83%E6%9D%86&suggest=0_1&_input_charset=utf-8&wq=taiqiu&suggest_query=taiqiu&source=suggest"rel="external">台球</a></p>
+                </div>
+                <div class="col-33">  <img src="image/网球.png" width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?ie=utf8&initiative_id=staobaoz_20161124&stats_click=search_radio_all%3A1&js=1&imgfile=&q=%E7%BD%91%E7%90%83%E6%8B%8D&suggest=0_1&_input_charset=utf-8&wq=wangqiu&suggest_query=wangqiu&source=suggest"rel="external">网球</a></p></div>
+            </div>
+
+            <div class="row">
+                <div class="col-33">
+                    <img src="image/足球.png"width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?q=zuqiu&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20161124&ie=utf8"rel="external">足球</a></p>
+                </div>
+                <div class="col-33">
+                    <img src="image/篮球.png"width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?q=lanqiu&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20161124&ie=utf8"rel="external">篮球</a></p>
+                </div>
+                <div class="col-33">
+                    <img src="image/棒球.png"width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?q=bangqiu+&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20161124&ie=utf8"rel="external">棒球</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-33">
+                    <img src="image/排球.png"width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?q=%E6%8E%92%E7%90%83&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20161124&ie=utf8"rel="external">排球</a></p>
+                </div>
+                <div class="col-33">
+                    <img src="image/乒乓球.png" width="50px" height="50px">
+                    <p><a href="https://s.taobao.com/search?q=%E4%B9%92%E4%B9%93%E7%90%83%E6%8B%8D&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20161124&ie=utf8"rel="external">乒乓球</a></p>
+                </div>
+                <div class="col-33">
+                    <img src="image/加号.png" width="50px" height="50px">
+                    <p><a href="https://www.taobao.com/?spm=a230r.1.0.0.xrWULK" rel="external">其他</a></p>
+                </div>
+            </div>
+        </div>
+        >
+    </div>
+    <!--账户管理-->
+    <div class="page" id="account">
+        <header class="bar bar-nav">
+            <a href="#set">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color:white;">账号管理</h1>
+        </header>
+        <div class="content">
+
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <img src="image/1.jpg" width="50px" height="50">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">阿斯蒂芬<br><small class="d1">123456789@qq.com</small></div>
+                            <div class="item-after"></div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title" ><a href="#" rel="external">添加账号</a></div>
+                        </div>
+                    </li>
+
+                    <li class="item-content">
+                        <div class="item-inner">
+                            <div class="item-title" ><a href="#" rel="external">退出登录</a></div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+            <div class="list-block">
+
+            </div>
+        </div>
+    </div>
+    <!--账号安全-->
+    <div class="page" id="safe">
+        <header class="bar bar-nav">
+            <a href="#set">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title"style="color: white">账号安全</h1>
+        </header>
+        <div class="content">
+            <div class="list-block">
+                <ul>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title"><a href="Password.html"rel="external">修改密码</a></div>
+                        </div>
+                    </li>
+                    <li class="item-content item-link">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title"><a href="phone.html"rel="external">绑定手机</a></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--清除缓存-->
+    <div class="page" id="huancun">
+        <header class="bar bar-nav">
+            <a href="#set">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">清除缓存</h1>
+        </header>
+        <div class="content">
+
+        </div>
+    </div>
+    <!--关于我们-->
+    <div class="page" id="aboutus">
+        <header class="bar bar-nav">
+            <a href="#set">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">关于我们</h1>
+        </header>
+        <div class="content" align="center">
+            <p>求球</p>
+            <p>当前版本号：v1.0.1</p>
+        </div>
+        <div class="bar bar-footer-secondary">
+            <p>求球 - Friends Find</p>
+            <p>Designed By Root & <a href="zrong.me">Root.xxx</a> 2016</p>
+
+
+        </div>
+
+    </div>
+    <!--意见反馈-->
+    <div class="page" id="feedback">
+        <header class="bar bar-nav">
+            <a href="#set">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">意见反馈</h1>
+        </header>
+        <div class="content">
+            <div class="list-block">
+                <ul>
+                    <li class="align-top">
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                            <div class="item-inner">
+                                <div class="item-input">
+
+                                    <textarea placeholder="有不爽的？来吐槽吧！"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="#feedback" class="button button-big button-fill button-danger"rel="external">取消</a></div>
+                    <div class="col-50"><a href="#set" class="button button-big button-fill button-success"rel="external">提交</a></div>
+                </div>
+            </div>
+
+        </div>
     </div>
 
 </div>
