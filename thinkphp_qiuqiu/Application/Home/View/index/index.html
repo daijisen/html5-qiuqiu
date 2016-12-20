@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="__PUBLIC__/front/css/yinyong.css">
     <title>求球</title>
 </head>
+
 <style type="text/css">
     .icon {
         width: 35px; height: 35px;
@@ -103,6 +104,7 @@
     }
 </style>
 <body>
+<div class="cover">
 <div class="page-group">
     <!--首页-->
     <div class="page page-current" id="index">
@@ -534,8 +536,8 @@
                             <div class="item-title">夜间模式</div>
                             <div class="item-after">
                                 <div class="item-input">
-                                    <label class="label-switch">
-                                        <input type="checkbox">
+                                    <label class="label-switch" id="night">
+                                        <input type="checkbox" >
                                         <div class="checkbox"></div>
                                     </label>
                                 </div>
@@ -1197,11 +1199,36 @@
 </div>
 
 
-
+</div>
 <script src='__PUBLIC__/front/js/toast.js'></script>
 <script src="__PUBLIC__/front/js/sm.js"></script>
 <script src="__PUBLIC__/front/js/sm-extend.js"></script>
 <script src="__PUBLIC__/front/js/sm-city-picker.js"></script>
 <script src="__PUBLIC__/front/js/demos.js"></script>
+<script>
+    var brightness = 0;
+    //显示遮罩
+    function cover(brightness) {
+        if (typeof(div) == 'undefined') {
+            div = document.createElement('div');
+            div.setAttribute('style', 'position:fixed;top:0;left:0;outline:5000px solid;z-index:99999;');
+            document.body.appendChild(div);
+        } else {
+            div.style.display = '';
+        }
+        div.style.outlineColor = 'rgba(0,0,0,' + brightness + ')';
+    }
+    //事件监听
+    var light = document.getElementById('night');
+    light.addEventListener('click', function() {
+        if(brightness == 0){
+            cover(brightness = 0.3);
+        }else{
+            cover(brightness = 0);
+        }
+
+    }, false);
+</script>
+
 </body>
 </html>
