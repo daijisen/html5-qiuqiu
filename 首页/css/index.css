@@ -3,13 +3,13 @@
 
         }
 .bar.bar-nav{
-            background: url("image/1.png");
+            background: url("../image/1.png");
         }
 .page{
-            background: url("image/6.jpg");
+            background: url("../image/6.jpg");
         }
 .bar.bar-tab{
-            background: url("image/15.jpg");
+            background: url("../image/15.jpg");
         }
 .xuanze1{
     background-color: cadetblue;
