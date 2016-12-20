@@ -3,13 +3,13 @@
 
         }
 .bar.bar-nav{
-            background: url("image/1.png");
+            background: url("../image/1.png");
         }
 .page{
-            background: url("image/6.jpg");
+            background: url("../image/6.jpg");
         }
 .bar.bar-tab{
-            background: url("image/15.jpg");
+            background: url("../image/15.jpg");
         }
 .xuanze1{
     background-color: cadetblue;
@@ -38,13 +38,18 @@
     margin: 0px;
 }
 .cdp{
-    background-color: blue;
+
     width: auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
 }
-
-
-
-
+.ping{
+    width: 80%;
+    margin-top:0px;
+    margin-bottom: 0px;
+   margin-left: 20%;
+}
 
 
 
