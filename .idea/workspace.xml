@@ -1,7 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bf9a728-e31d-4cb7-915b-96303a7d1d09" name="Default" comment="">
+    <list default="true" id="5bf9a728-e31d-4cb7-915b-96303a7d1d09" name="Default" comment="评论面板的实现">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/action-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/action-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/alert-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/alert-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-d-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/arrow-u-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/audio-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/audio-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/back-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/back-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/bars-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/bars-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/bullets-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/bullets-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/calendar-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/calendar-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/camera-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/camera-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-d-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-d-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-l-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-l-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-r-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-r-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-u-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/carat-u-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/check-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/check-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/clock-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/clock-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/cloud-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/cloud-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/comment-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/comment-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/delete-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/delete-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/edit-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/edit-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/eye-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/eye-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/forbidden-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/forbidden-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/forward-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/forward-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/gear-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/gear-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/grid-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/grid-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/heart-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/heart-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/home-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/home-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/info-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/info-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/location-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/location-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/lock-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/lock-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/mail-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/mail-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/minus-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/minus-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/navigation-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/navigation-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/phone-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/phone-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/plus-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/plus-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/power-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/power-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/recycle-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/recycle-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/refresh-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/refresh-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/search-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/search-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/shop-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/shop-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/star-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/star-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/tag-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/tag-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/user-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/user-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/video-black.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/images/icons-png/video-white.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/8.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/bj.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/circle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/circle2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/image/tx.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/commend.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/camera.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/jquery.mobile-1.4.5.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/sm.min,sm-extend.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/sm.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/blue.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/blue.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/css/themes/jquery.mobile.icons.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/demo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/demo_fontclass.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/demo_symbol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/demo_unicode.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/iconfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/icon/left.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/camera.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/iconfont.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery-1.7.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery-2.2.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery-3.1.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery-3.1.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.easing.1.3.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.mobile-1.4.5.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.mobile.customized.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.slideBox.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/jquery.slideBox.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/sm.min,sm-extend.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/sm.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/首页/js/zepto.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="html5-qiuqiu.iws" />
@@ -28,7 +192,7 @@
       <file leaf-file-name="commend.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/首页/commend.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1640">
+            <state relative-caret-position="4465">
               <caret line="235" column="22" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -242,7 +406,7 @@
       <workItem from="1481449951544" duration="2892000" />
       <workItem from="1481701241839" duration="1065000" />
       <workItem from="1481703868842" duration="5531000" />
-      <workItem from="1482196145142" duration="727000" />
+      <workItem from="1482196145142" duration="1490000" />
     </task>
     <task id="LOCAL-00001" summary="综合所有网页">
       <created>1481704342295</created>
@@ -265,17 +429,24 @@
       <option name="project" value="LOCAL" />
       <updated>1482196540893</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="评论面板的实现">
+      <created>1482196934823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1482196934823</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10215000" />
+    <option name="totallyTimeSpent" value="10978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18374817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18374817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -308,7 +479,8 @@
     <MESSAGE value="综合所有网页" />
     <MESSAGE value="首页团队评论页" />
     <MESSAGE value="css和js" />
-    <option name="LAST_COMMIT_MESSAGE" value="css和js" />
+    <MESSAGE value="评论面板的实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="评论面板的实现" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -590,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/首页/commend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
+        <state relative-caret-position="4465">
           <caret line="235" column="22" selection-start-line="235" selection-start-column="22" selection-end-line="235" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
