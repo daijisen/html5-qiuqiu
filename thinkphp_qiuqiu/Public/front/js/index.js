@@ -1,2 +1,15 @@
-console.log("欢迎大家关注我的微博：说Z先生爱你");
-console.log("欢迎大家关注我的个人网站：zrong.me");
+function ChangeDiv(divId,divName,zDivCount)
+
+{ 
+
+for(i=0;i<zDivCount;i++)
+
+{
+
+document.getElementById(divName+i).style.display="none"; 
+
+}
+
+document.getElementById(divName+divId).style.display="";
+
+}
