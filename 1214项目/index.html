@@ -23,7 +23,8 @@
         background: url("image/1.png");
     }
     .page{
-        background: url("image/6.jpg");
+        background: url("image/19.png");
+        background-size: cover;
     }
     .bar.bar-tab{
         background: url("image/15.jpg");
@@ -96,6 +97,10 @@
     .icon.zuqiu{
         width:44px;
         height: 44px;
+    }
+    .tag{
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 </style>
 <body>
@@ -233,16 +238,16 @@
         <div class="content">
 
 
-            <div class="content-block">
+            <div class="content-block tag">
                 <div class="row">
                     <div class="col-20"><a href="#" class="button button-big button-fill button-danger">NBA</a></div>
-                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">CBA</a></div>
-                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">中超</a></div>
-                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">西甲</a></div>
-                    <div class="col-20"><a href="#" class="button button-big button-fill button-success">英超</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
+                    <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
                 </div>
             </div>
-            <div class="list-block media-list">
+            <div class="list-block media-list tag">
                 <ul>
                     <li>
                         <a href="#news-content" class="item-link item-content">
@@ -300,7 +305,7 @@
     </div>
     <!--新闻内容页--><div class="page" id="news-content">
         <header class="bar bar-nav">
-            <a href="#news">
+            <a href="#zhongchao">
                 <svg class="icon pull-left" aria-hidden="true">
                     <use xlink:href="#icon-shouhui02" class="shouhui"></use>
                 </svg>
@@ -403,7 +408,7 @@
     <!--CBA-->
     <div class="page" id="cba">
         <!-- 标题栏 -->
-        <header class="bar bar-nav">
+        <header class="bar bar-nav ">
 
             <h1 class="title">求球</h1>
         </header>
@@ -449,19 +454,19 @@
         <div class="content">
 
 
-            <div class="content-block">
+            <div class="content-block tag">
                 <div class="row">
-                    <div class="col-20"><a href="#news-content" class="button button-big button-fill button-success">NBA</a></div>
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
                     <div class="col-20"><a href="#cba" class="button button-big button-fill button-danger">CBA</a></div>
                     <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
                     <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
                     <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
                 </div>
             </div>
-            <div class="list-block media-list">
+            <div class="list-block media-list tag">
                 <ul>
                     <li>
-                        <a href="#news-content" class="item-link item-content">
+                        <a href="#cba-content" class="item-link item-content">
                             <div class="item-media"><img src="image/125.png" style='width: 4rem;'></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
@@ -473,46 +478,657 @@
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="image/122.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">郭艾伦当选CBA第十六轮本土MVP</div>
-                                </div>
-
-                                <div class="item-text">郭艾伦得到了44%的球迷选票</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="image/123.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">第四节逆转，辽宁主场力克北京</div>
-                                </div>
-
-                                <div class="item-text">四人得分上双，辽宁赢下“钢铁”之战</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="image/124.png" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">广东男篮已试训查尔斯-盖恩斯</div>
-
-                                </div>
-
-                                <div class="item-text">查尔斯上赛季在浙江队场均能够贡献19.4分和11.7篮板</div>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
+    </div>
+    <!--中超-->
+    <div class="page" id="zhongchao">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+
+            <h1 class="title">求球</h1>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="#index">
+                <span class="icon">
+                    <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-feihang" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external active" href="#news">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item external" href="#page-fabu">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item external" href="#me">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">我的</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+
+
+            <div class="content-block tag">
+                <div class="row">
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-danger">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
+                    <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
+                </div>
+            </div>
+            <div class="list-block media-list tag">
+                <ul>
+                    <li>
+                        <a href="#zhongchao-content" class="item-link item-content">
+                            <div class="item-media"><img src="image/126.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">官方：前国脚中卫出人领队兼助教</div>
+
+                                </div>
+
+                                <div class="item-text">张恩华此前在比利亚雷亚尔任助教</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--西甲-->
+    <div class="page" id="xijia">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+
+            <h1 class="title">求球</h1>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="#index">
+                <span class="icon">
+                    <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-feihang" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external active" href="#news">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item external" href="#page-fabu">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item external" href="#me">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">我的</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+
+
+            <div class="content-block tag">
+                <div class="row">
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-danger">西甲</a></div>
+                    <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
+                </div>
+            </div>
+            <div class="list-block media-list tag">
+                <ul>
+                    <li>
+                        <a href="#xijia-content" class="item-link item-content">
+                            <div class="item-media"><img src="image/133.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">皇马大胜鹿岛鹿角：本泽马挑起大梁</div>
+
+                                </div>
+
+                                <div class="item-text">鹿岛不畏强敌，皇马夺冠难言出色</div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--英超-->
+    <div class="page" id="yingchao">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+
+            <h1 class="title">求球</h1>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="#index">
+                <span class="icon">
+                    <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-feihang" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item external active" href="#news">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item external" href="#page-fabu">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item external" href="#me">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">我的</span>
+                <span class="badge">2</span>
+            </a>
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+
+
+            <div class="content-block tag">
+                <div class="row">
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-danger">英超</a></div>
+                </div>
+            </div>
+            <div class="list-block media-list tag">
+                <ul>
+                    <li>
+                        <a href="#yingchao-content" class="item-link item-content">
+                            <div class="item-media"><img src="image/137.png" style='width: 4rem;'></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title">韦伯：罚下瓦尼迪的主裁不该继续吹比赛</div>
+
+                                </div>
+
+                                <div class="item-text">鲍森将执法利物浦和曼城的焦点战</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--cba内容页-->
+    <div class="page" id="cba-content">
+        <header class="bar bar-nav">
+            <a href="#cba">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">NBA</h1>
+            <button class="button button-link button-nav pull-right">
+                <a href="#" style="color: white"> 刷新</a>
+            </button>
+
+        </header>
+
+        <div class="content">
+            <div class="content-padded">
+                <h2>赛后，勇士胜鹈鹕，库里破三分记录<br><small>来源：虎扑体育</small></h2>
+                <div>
+                    <img src="image/10.jpg" style="width: 100%">
+                </div>
+
+                <p>体育11月8日讯 今天勇士回到主场迎战鹈鹕，戴维斯首节就砍下12分让鹈鹕稍占上风，而找到手感的库里单节命中三记三分将比分反差，此届初在双方轮换阵容短暂
+                    的相持后，勇士连续打出反击，期间库里再命中三记三分，率队打出一波20-3瞬间拉开比分，戴维斯带队趁势反击完成反超。</p>
+            </div>
+            <div class="list-block news">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <svg class="icon pull-left d1" aria-hidden="true">
+                                <use xlink:href="#icon-loudspeaker" class="shouhui"></use>
+                            </svg>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">一起吐槽</div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/113.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>想增肥的请举手</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                </div>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/115.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>大牛牛</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">看到沃尔为小女孩去世哭了我也感动的哭了，沃尔算不上巨星，可每次看到别人黑他
+                        我都感到不平，甚至有人说他是扶不起的阿斗，传球至上的控卫注定不是如今联盟的主流，可那又怎样。</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/111.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>如果我是dj</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">这好比我打王者荣耀，同样是四个人，真心带不动</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/112.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>洛杉矶铁匠</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">自从知道沃尔为小女孩一战之后，无论怎样我都不会黑沃尔，一个人的战斗</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--中超内容页-->
+    <div class="page" id="zhongchao-content">
+        <header class="bar bar-nav">
+            <a href="#zhongchao">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">NBA</h1>
+            <button class="button button-link button-nav pull-right">
+                <a href="#" style="color: white"> 刷新</a>
+            </button>
+
+        </header>
+
+        <div class="content">
+            <div class="content-padded">
+                <h2>赛后，勇士胜鹈鹕，库里破三分记录<br><small>来源：虎扑体育</small></h2>
+                <div>
+                    <img src="image/10.jpg" style="width: 100%">
+                </div>
+
+                <p>体育11月8日讯 今天勇士回到主场迎战鹈鹕，戴维斯首节就砍下12分让鹈鹕稍占上风，而找到手感的库里单节命中三记三分将比分反差，此届初在双方轮换阵容短暂
+                    的相持后，勇士连续打出反击，期间库里再命中三记三分，率队打出一波20-3瞬间拉开比分，戴维斯带队趁势反击完成反超。</p>
+            </div>
+            <div class="list-block news">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <svg class="icon pull-left d1" aria-hidden="true">
+                                <use xlink:href="#icon-loudspeaker" class="shouhui"></use>
+                            </svg>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">一起吐槽</div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/113.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>想增肥的请举手</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                </div>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/115.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>大牛牛</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">看到沃尔为小女孩去世哭了我也感动的哭了，沃尔算不上巨星，可每次看到别人黑他
+                        我都感到不平，甚至有人说他是扶不起的阿斗，传球至上的控卫注定不是如今联盟的主流，可那又怎样。</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/111.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>如果我是dj</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">这好比我打王者荣耀，同样是四个人，真心带不动</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/112.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>洛杉矶铁匠</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">自从知道沃尔为小女孩一战之后，无论怎样我都不会黑沃尔，一个人的战斗</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--西甲内容-->
+    <div class="page" id="xijia-content">
+        <header class="bar bar-nav">
+            <a href="#xijia">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">NBA</h1>
+            <button class="button button-link button-nav pull-right">
+                <a href="#" style="color: white"> 刷新</a>
+            </button>
+
+        </header>
+
+        <div class="content">
+            <div class="content-padded">
+                <h2>赛后，勇士胜鹈鹕，库里破三分记录<br><small>来源：虎扑体育</small></h2>
+                <div>
+                    <img src="image/10.jpg" style="width: 100%">
+                </div>
+
+                <p>体育11月8日讯 今天勇士回到主场迎战鹈鹕，戴维斯首节就砍下12分让鹈鹕稍占上风，而找到手感的库里单节命中三记三分将比分反差，此届初在双方轮换阵容短暂
+                    的相持后，勇士连续打出反击，期间库里再命中三记三分，率队打出一波20-3瞬间拉开比分，戴维斯带队趁势反击完成反超。</p>
+            </div>
+            <div class="list-block news">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <svg class="icon pull-left d1" aria-hidden="true">
+                                <use xlink:href="#icon-loudspeaker" class="shouhui"></use>
+                            </svg>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">一起吐槽</div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/113.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>想增肥的请举手</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                </div>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/115.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>大牛牛</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">看到沃尔为小女孩去世哭了我也感动的哭了，沃尔算不上巨星，可每次看到别人黑他
+                        我都感到不平，甚至有人说他是扶不起的阿斗，传球至上的控卫注定不是如今联盟的主流，可那又怎样。</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/111.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>如果我是dj</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">这好比我打王者荣耀，同样是四个人，真心带不动</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/112.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>洛杉矶铁匠</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">自从知道沃尔为小女孩一战之后，无论怎样我都不会黑沃尔，一个人的战斗</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--英超内容页-->
+    <div class="page" id="yingchao-content">
+        <header class="bar bar-nav">
+            <a href="#yingchao">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title">NBA</h1>
+            <button class="button button-link button-nav pull-right">
+                <a href="#" style="color: white"> 刷新</a>
+            </button>
+
+        </header>
+
+        <div class="content">
+            <div class="content-padded">
+                <h2>赛后，勇士胜鹈鹕，库里破三分记录<br><small>来源：虎扑体育</small></h2>
+                <div>
+                    <img src="image/10.jpg" style="width: 100%">
+                </div>
+
+                <p>体育11月8日讯 今天勇士回到主场迎战鹈鹕，戴维斯首节就砍下12分让鹈鹕稍占上风，而找到手感的库里单节命中三记三分将比分反差，此届初在双方轮换阵容短暂
+                    的相持后，勇士连续打出反击，期间库里再命中三记三分，率队打出一波20-3瞬间拉开比分，戴维斯带队趁势反击完成反超。</p>
+            </div>
+            <div class="list-block news">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <svg class="icon pull-left d1" aria-hidden="true">
+                                <use xlink:href="#icon-loudspeaker" class="shouhui"></use>
+                            </svg>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">一起吐槽</div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/113.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>想增肥的请举手</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                </div>
+            </div>
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/115.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>大牛牛</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">看到沃尔为小女孩去世哭了我也感动的哭了，沃尔算不上巨星，可每次看到别人黑他
+                        我都感到不平，甚至有人说他是扶不起的阿斗，传球至上的控卫注定不是如今联盟的主流，可那又怎样。</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/111.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>如果我是dj</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">这好比我打王者荣耀，同样是四个人，真心带不动</p>
+                </div>
+            </div>
+
+            <div class="ping1" >
+                <div class="ping2">
+                    <div class="ping21">
+                        <img src="image/112.png">
+                    </div>
+                    <div class="ping22">
+                        <span class="ping221"><h2>洛杉矶铁匠</h2></span>
+                        <span class="ping222"><p>来自手机客户端</p></span>
+                    </div>
+                </div>
+                <div class="ping3">
+                    <p class="ping31">自从知道沃尔为小女孩一战之后，无论怎样我都不会黑沃尔，一个人的战斗</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
     <!--发布页-->  <div class="page" id="page-fabu">
     <header class="bar bar-nav">
