@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>注册 - 求球 - Thousands Find</title>
-	<link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/front/style/register-login.css">
+	<link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/css/register-login.css">
 </head>
 <body>
 <div id="box"></div>
@@ -16,19 +17,20 @@
 	<div class="cont-main clearfix">
 		<div class="index-tab">
 			<div class="index-slide-nav">
-				<a href="<?php echo U('Home/login/login');?>">登录</a>
-				<a href="<?php echo U('Home/login/register');?>" class="active">注册</a>
+				<a href="login.html">登录</a>
+				<a href="register.html" class="active">注册</a>
 				<div class="slide-bar slide-bar1"></div>				
 			</div>
 		</div>
 
+		<form action="<?php echo U('Home/login/register');?>" method="post">
 		<div class="login form">
 			<div class="group">
 				<div class="group-ipt email">
 					<input type="email" name="email" id="email" class="ipt" placeholder="邮箱地址" required>
 				</div>
 				<div class="group-ipt user">
-					<input type="text" name="user" id="user" class="ipt" placeholder="选择一个用户名" required>
+					<input type="text" name="username" id="user" class="ipt" placeholder="选择一个用户名" required>
 				</div>
 				<div class="group-ipt password">
 					<input type="password" name="password" id="password" class="ipt" placeholder="设置登录密码" required>
@@ -37,31 +39,33 @@
 					<input type="password" name="password1" id="password1" class="ipt" placeholder="重复密码" required>
 				</div>
 				<div class="group-ipt user">
-					<input type="text" name="user" id="user" class="ipt" placeholder="输入您的性别" required>
+					<input type="text" name="gender" id="user" class="ipt" placeholder="输入您的性别" required>
 				</div>
                                 <div class="group-ipt user">
-					<input type="text" name="user" id="user" class="ipt" placeholder="输入大学名称" required>
+					<input type="text" name="university" id="user1" class="ipt" placeholder="输入大学名称" required>
 				</div>
 
 			</div>
 		</div>
+			<div class="button">
+				<a href="login.html"><button type="submit" class="login-btn register-btn" id="button">注册</button></a>
+			</div>
+		</form>
 
-		<div class="button">
-			<a href="<?php echo U('Home/login/login');?>"><button type="submit" class="login-btn register-btn" id="button">注册</button></a>
-		</div>
+
 	</div>
 </div>
 
 <div class="footer">
 	<p>求球 - Friends Find</p>
-	<p>Designed By Root & <a href="<?php echo U('Home/login/register');?>">Root.xxx</a> 2016</p>
+	<p>Designed By Root & <a href="register.html">Root.xxx</a> 2016</p>
 </div>
 
-<script src='/thinkphp_3.2.3/Public/front/js/particles.js' type="text/javascript"></script>
-<script src='/thinkphp_3.2.3/Public/front/js/background.js' type="text/javascript"></script>
-<script src='/thinkphp_3.2.3/Public/front/js/jquery.min.js' type="text/javascript"></script>
-<script src='/thinkphp_3.2.3/Public/front/js/layer/layer.js' type="text/javascript"></script>
-<script src='/thinkphp_3.2.3/Public/front/js/index.js' type="text/javascript"></script>
+<script src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/particles.js' type="text/javascript"></script>
+<script src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/background.js' type="text/javascript"></script>
+<script src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/jquery.min.js' type="text/javascript"></script>
+<script src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/layer/layer.js' type="text/javascript"></script>
+<script src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/index1.js' type="text/javascript"></script>
 <script>
 	$('.imgcode').hover(function(){
 		layer.tips("a", '.verify', {

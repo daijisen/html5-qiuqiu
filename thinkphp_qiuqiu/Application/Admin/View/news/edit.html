@@ -3,13 +3,26 @@
 <div class="main-wrap">
 
     <div class="crumb-wrap">
-        <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allNewses.html">新闻管理</a><span class="crumb-step">&gt;</span><span>新增新闻</span></div>
+        <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allNewses.html">新闻管理</a><span class="crumb-step">&gt;</span><span>修改新闻</span></div>
     </div>
     <div class="result-wrap">
         <div class="result-content">
             <form action="{:U('Admin/news/update')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
                 <table class="insert-tab" width="100%">
                     <tbody>
+                    <tr>
+                        <th width="120">所属类型:</th>
+                        <td>
+                            <select name="type" id="select">
+                                <option value="{$news.type}">{$news.name}</option>
+                                <option value="1">NBA</option>
+                                <option value="2">CBA</option>
+                                <option value="3">中超</option>
+                                <option value="4">西甲</option>
+                                <option value="5">中超</option>
+                            </select>
+                        </td>
+                    </tr>
                     <tr>
                         <th><i class="require-red">*</i>标题：</th>
                         <input name="nid"  value="{$news.nid}" type="hidden">

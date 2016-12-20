@@ -5,9 +5,9 @@
     <title>信息发布</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0;" name="viewport" />
-    <link rel="stylesheet" href="/thinkphp_3.2.3/Public/front/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="/thinkphp_3.2.3/Public/front/jquery.mobile-1.4.5/jquery-2.2.2.js"></script>
-    <script src="/thinkphp_3.2.3/Public/front/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/jquery.mobile-1.4.5/jquery-2.2.2.js"></script>
+    <script src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
     <!--<link rel="stylesheet" href="lib/css/jquery.mCustomScrollbar.min.css"/>-->
     <!--<link rel="stylesheet" href="dist/css/jquery.emoji.css"/>-->
@@ -109,7 +109,7 @@
         <h1>发布成功</h1>
     </div>
     <div data-role="content" class="test">
-        <img src="/thinkphp_3.2.3/Public/front/images/yes.png">
+        <img src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/images/yes.png">
     </div>
 
 </div>

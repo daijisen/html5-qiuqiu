@@ -18,6 +18,8 @@
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
+                            <th>所属类</th>
+                            <th>类名</th>
                             <th>标题</th>
                             <th>图片</th>
                             <th>更新时间</th>
@@ -30,6 +32,8 @@
                                 <input name="ids[]" value="59" type="hidden">
                                 <input class="common-input sort-input" name="ord[]" value="{$vo.nid}" type="text">
                             </td>
+                            <td>{$vo.type}</td>
+                            <td>{$vo.name}</td>
                             <td>{$vo.title}</td>
                             <td width="80px"><img src="__PUBLIC__/uploads{$vo.newpic}" height="80px" width="80px"></td>
                             <td>{$vo.updatetime}</td>

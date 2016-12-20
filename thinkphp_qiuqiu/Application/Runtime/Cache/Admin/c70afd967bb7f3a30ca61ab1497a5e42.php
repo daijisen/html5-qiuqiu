@@ -3,19 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>求球</title>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/common.css"/>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/main.css"/>
-        <script type="text/javascript" src="/thinkphp_3.2.3/Public/end/js/libs/modernizr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/main.css"/>
+        <script type="text/javascript" src="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/js/libs/modernizr.min.js"></script>
         </head>
 <body>
 <style>
     .topbar-wrap{
-        background-color: gray;
+        background-image: url('/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/headbg.jpg');
+        height:100px;
+    }
+    .topbar-inner{
+        padding-top:2% ;
+    }
+    body{
+        color: black;
+        background-image: url("/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/contentbg.jpg");
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-position:bottom right;
+    }
+
+    .sidebar-wrap{
+
     }
     .on1{
-        background-color: white ;
         color: black;
-        font-family: 幼圆;
+        font-family: 华文行楷;
+        font-size:50px;
     }
 
 </style>
@@ -24,12 +39,13 @@
         <div class="topbar-logo-wrap clearfix">
             <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                <li><a class="on1" href="index.html">首页</a></li>
-                <li><a href="#" >网站首页</a></li>
+                <li><a class="on1" href="<?php echo U('Admin/index/index');?>">求球</a></li>
+                <li><a href="<?php echo U('Home/index/index');?>" >网站首页</a></li>
             </ul>
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
+                <li><a href="#" style="color: #5DD300">管理员</a></li>
                 <li><a href="#">修改密码</a></li>
                 <li><a href="#">退出</a></li>
             </ul>
@@ -83,6 +99,7 @@
             </ul>
         </div>
     </div>
+    <div class="main-content">
     <!--/sidebar-->
     
     <!--/sidebar-->
@@ -125,6 +142,7 @@
     </div>
     <!--/main-->
     <!--/main-->
+    </div>
 </div>
 </body>
 </html>
