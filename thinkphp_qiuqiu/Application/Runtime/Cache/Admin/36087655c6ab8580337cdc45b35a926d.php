@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>求球</title>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/common.css"/>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/main.css"/>
-        <script type="text/javascript" src="/thinkphp_3.2.3/Public/end/js/libs/modernizr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/main.css"/>
+        <script type="text/javascript" src="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/js/libs/modernizr.min.js"></script>
         </head>
 <body>
 <style>
     .topbar-wrap{
-        background-image: url('/thinkphp_3.2.3/Public/end/images/headbg.jpg');
+        background-image: url('/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/headbg.jpg');
         height:100px;
     }
     .topbar-inner{
@@ -18,7 +18,7 @@
     }
     body{
         color: black;
-        background-image: url("/thinkphp_3.2.3/Public/end/images/contentbg.jpg");
+        background-image: url("/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/contentbg.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
         background-position:bottom right;
@@ -45,7 +45,7 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#" style="color: #5DD300">管理员</a></li>
+                <li><a href="#" style="color: #5DD300">超级管理员</a></li>
                 <li><a href="#">修改密码</a></li>
                 <li><a href="#">退出</a></li>
             </ul>
@@ -59,6 +59,13 @@
         </div>
         <div class="sidebar-content">
             <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>管理员列表</a>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/administrators/index');?>"><i class="icon-font">&#xe008;</i>所有管理员</a></li>
+                        <li><a href="<?php echo U('Admin/administrators/create');?>"><i class="icon-font">&#xe005;</i>添加管理员</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
                     <ul class="sub-menu">
@@ -76,9 +83,8 @@
                 <li>
                     <a href="#"><i class="icon-font">&#xe018;</i>评论管理</a>
                     <ul class="sub-menu">
-                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>所有评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/create');?>"><i class="icon-font">&#xe037;</i>增加评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/allhuifu');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
+                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>评论管理</a></li>
+                        <li><a href="<?php echo U('Admin/reply/index');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
                     </ul>
                 </li>
                 <li>
@@ -92,7 +98,6 @@
                     <a href="#"><i class="icon-font">&#xe018;</i>团队管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/team/index');?>"><i class="icon-font">&#xe017;</i>所有团队</a></li>
-                        <li><a href="<?php echo U('Admin/team/create');?>"><i class="icon-font">&#xe037;</i>新增团队</a></li>
                     </ul>
                 </li>
 
@@ -109,53 +114,43 @@
             <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">所有新闻</span></div>
         </div>
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
+            <form name="myform" id="myform" method="post" action="<?php echo U('Admin/news/destoryBatch');?>">
 
+                <div class="result-title">
+                    <div class="result-list">
+                        <button id="batchDel"  type="submit"><i class="icon-font"></i>批量删除</button>
+                    </div>
+                </div>
                 <div class="result-content">
                     <table class="result-tab" width="100%">
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
-                            <th>ID</th>
+                            <th>所属类</th>
+                            <th>类名</th>
                             <th>标题</th>
-                            <th>发布时间</th>
+                            <th>图片</th>
                             <th>更新时间</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td class="tc"><input name="id[]" value="<?php echo ($vo["nid"]); ?>" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                                <input class="common-input sort-input" name="ord[]" value="<?php echo ($vo["nid"]); ?>" type="text">
                             </td>
-                            <td>59</td>
-                            <td title="威少在逆天！30+10+14雷霆客场115-92大胜勇士"><a target="_blank" href="#" title="2015中国国际矿业大会组委会会议10月26日下午在津召开">威少再次逆天</a> …
-                            </td>
-                            <td>2016-09-05 21:11:01</td>
-                            <td>2016-09-06 09:11:01</td>
+                            <td><?php echo ($vo["type"]); ?></td>
+                            <td><?php echo ($vo["name"]); ?></td>
+                            <td><?php echo ($vo["title"]); ?></td>
+                            <td width="80px"><img src="/html5-qiuqiu/thinkphp_qiuqiu/Public/uploads<?php echo ($vo["newpic"]); ?>" height="80px" width="80px"></td>
+                            <td><?php echo ($vo["updatetime"]); ?></td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="<?php echo U('Admin/news/edit');?>/nid/<?php echo ($vo["nid"]); ?>">修改</a>
+                                <a class="link-del" href="<?php echo U('Admin/news/destory');?>/nid/<?php echo ($vo["nid"]); ?>">删除</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td title="德怀恩韦德献出绝杀，热火100-112不敌公牛，3号手刃旧主，迎来8连胜"><a target="_blank" href="#" title="2015中国国际矿业大会组委会会议10月26日下午在津召开">韦德献绝杀~</a> …
-                            </td>
-                            <td>2016-09-05 21:11:01</td>
-                            <td>2016-09-06 09:11:01</td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> <?php echo ($page); ?></div>
                 </div>
             </form>
         </div>

@@ -10,7 +10,19 @@
                 <form action="{:U('Admin/news/store')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
-                            <tr>
+                                <tr>
+                                    <th width="120">所属类型:</th>
+                                    <td>
+                                        <select name="type" id="select">
+                                            <option value="1">NBA</option>
+                                            <option value="2">CBA</option>
+                                            <option value="3">中超</option>
+                                            <option value="4">西甲</option>
+                                            <option value="5">英超</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
                                 <th><i class="require-red">*</i>标题：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="title" size="50" value="" type="text">

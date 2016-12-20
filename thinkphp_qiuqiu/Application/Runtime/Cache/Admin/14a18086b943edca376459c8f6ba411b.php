@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>求球</title>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/common.css"/>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/main.css"/>
-        <script type="text/javascript" src="/thinkphp_3.2.3/Public/end/js/libs/modernizr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/main.css"/>
+        <script type="text/javascript" src="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/js/libs/modernizr.min.js"></script>
         </head>
 <body>
 <style>
     .topbar-wrap{
-        background-image: url('/thinkphp_3.2.3/Public/end/images/headbg.jpg');
+        background-image: url('/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/headbg.jpg');
         height:100px;
     }
     .topbar-inner{
@@ -18,7 +18,7 @@
     }
     body{
         color: black;
-        background-image: url("/thinkphp_3.2.3/Public/end/images/contentbg.jpg");
+        background-image: url("/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/contentbg.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
         background-position:bottom right;
@@ -45,7 +45,7 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#" style="color: #5DD300">管理员</a></li>
+                <li><a href="#" style="color: #5DD300">超级管理员</a></li>
                 <li><a href="#">修改密码</a></li>
                 <li><a href="#">退出</a></li>
             </ul>
@@ -59,6 +59,13 @@
         </div>
         <div class="sidebar-content">
             <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>管理员列表</a>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/administrators/index');?>"><i class="icon-font">&#xe008;</i>所有管理员</a></li>
+                        <li><a href="<?php echo U('Admin/administrators/create');?>"><i class="icon-font">&#xe005;</i>添加管理员</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
                     <ul class="sub-menu">
@@ -76,9 +83,8 @@
                 <li>
                     <a href="#"><i class="icon-font">&#xe018;</i>评论管理</a>
                     <ul class="sub-menu">
-                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>所有评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/create');?>"><i class="icon-font">&#xe037;</i>增加评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/allhuifu');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
+                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>评论管理</a></li>
+                        <li><a href="<?php echo U('Admin/reply/index');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
                     </ul>
                 </li>
                 <li>
@@ -92,7 +98,6 @@
                     <a href="#"><i class="icon-font">&#xe018;</i>团队管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/team/index');?>"><i class="icon-font">&#xe017;</i>所有团队</a></li>
-                        <li><a href="<?php echo U('Admin/team/create');?>"><i class="icon-font">&#xe037;</i>新增团队</a></li>
                     </ul>
                 </li>
 
@@ -110,22 +115,34 @@
         </div>
         <div class="result-wrap">
             <div class="result-content">
-                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                <form action="<?php echo U('Admin/news/store');?>" method="post" id="myform" name="myform" enctype="multipart/form-data">
                     <table class="insert-tab" width="100%">
                         <tbody>
-                            <tr>
+                                <tr>
+                                    <th width="120">所属类型:</th>
+                                    <td>
+                                        <select name="type" id="select">
+                                            <option value="1">NBA</option>
+                                            <option value="2">CBA</option>
+                                            <option value="3">中超</option>
+                                            <option value="4">西甲</option>
+                                            <option value="5">英超</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
                                 <th><i class="require-red">*</i>标题：</th>
                                 <td>
                                     <input class="common-text required" id="title" name="title" size="50" value="" type="text">
                                 </td>
                             </tr>
                             <tr>
-                                <th>描述：</th>
-                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="3"></textarea></td>
+                                <th>配图</th>
+                                <td><input type="file" name="newpic" /></td>
                             </tr>
                             <tr>
                                 <th>内容：</th>
-                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
+                                <td><textarea name="ncontent" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
                             </tr>
                             <tr>
                                 <th></th>

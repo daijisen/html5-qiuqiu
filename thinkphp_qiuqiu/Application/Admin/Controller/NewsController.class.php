@@ -5,11 +5,11 @@ class NewsController extends Controller {
    public function index(){
 
            $newModel = M('news');
-            // 取到所有对象
 
 
            // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-            $list = $newModel->order('nid desc')->page($_GET['p'],'4')->select();
+           $sql = "select news.*,name from news,newstype where news.type = newstype.type order by nid desc";
+            $list = M()->page($_GET['p'],'4')->query($sql);
             $this->assign('list',$list);
             // 赋值数据集
             $count = $newModel->count();
@@ -81,9 +81,10 @@ class NewsController extends Controller {
 
        public function edit(){
                $nid = I('nid');
-               $newModel = M('news');
-               $data = $newModel->find($nid);
-               $this->assign('news',$data);
+               $sql = "select news.*,name from news,newstype where news.type = newstype.type and nid = $nid";
+               $newModel = M();
+               $data = $newModel->query($sql);
+               $this->assign('news',$data[0]);
                $this->display();
        }
 

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>求球</title>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/common.css"/>
-        <link rel="stylesheet" type="text/css" href="/thinkphp_3.2.3/Public/end/css/main.css"/>
-        <script type="text/javascript" src="/thinkphp_3.2.3/Public/end/js/libs/modernizr.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/css/main.css"/>
+        <script type="text/javascript" src="/html5-qiuqiu/thinkphp_qiuqiu/Public/end/js/libs/modernizr.min.js"></script>
         </head>
 <body>
 <style>
     .topbar-wrap{
-        background-image: url('/thinkphp_3.2.3/Public/end/images/headbg.jpg');
+        background-image: url('/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/headbg.jpg');
         height:100px;
     }
     .topbar-inner{
@@ -18,7 +18,7 @@
     }
     body{
         color: black;
-        background-image: url("/thinkphp_3.2.3/Public/end/images/contentbg.jpg");
+        background-image: url("/html5-qiuqiu/thinkphp_qiuqiu/Public/end/images/contentbg.jpg");
         background-repeat:no-repeat;
         background-attachment:fixed;
         background-position:bottom right;
@@ -45,7 +45,7 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="#" style="color: #5DD300">管理员</a></li>
+                <li><a href="#" style="color: #5DD300">超级管理员</a></li>
                 <li><a href="#">修改密码</a></li>
                 <li><a href="#">退出</a></li>
             </ul>
@@ -59,6 +59,13 @@
         </div>
         <div class="sidebar-content">
             <ul class="sidebar-list">
+                <li>
+                    <a href="#"><i class="icon-font">&#xe003;</i>管理员列表</a>
+                    <ul class="sub-menu">
+                        <li><a href="<?php echo U('Admin/administrators/index');?>"><i class="icon-font">&#xe008;</i>所有管理员</a></li>
+                        <li><a href="<?php echo U('Admin/administrators/create');?>"><i class="icon-font">&#xe005;</i>添加管理员</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#"><i class="icon-font">&#xe003;</i>用户管理</a>
                     <ul class="sub-menu">
@@ -76,9 +83,8 @@
                 <li>
                     <a href="#"><i class="icon-font">&#xe018;</i>评论管理</a>
                     <ul class="sub-menu">
-                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>所有评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/create');?>"><i class="icon-font">&#xe037;</i>增加评论</a></li>
-                        <li><a href="<?php echo U('Admin/comment/allhuifu');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
+                        <li><a href="<?php echo U('Admin/comment/index');?>"><i class="icon-font">&#xe017;</i>评论管理</a></li>
+                        <li><a href="<?php echo U('Admin/reply/index');?>"><i class="icon-font">&#xe037;</i>回复管理</a></li>
                     </ul>
                 </li>
                 <li>
@@ -92,7 +98,6 @@
                     <a href="#"><i class="icon-font">&#xe018;</i>团队管理</a>
                     <ul class="sub-menu">
                         <li><a href="<?php echo U('Admin/team/index');?>"><i class="icon-font">&#xe017;</i>所有团队</a></li>
-                        <li><a href="<?php echo U('Admin/team/create');?>"><i class="icon-font">&#xe037;</i>新增团队</a></li>
                     </ul>
                 </li>
 
@@ -110,115 +115,45 @@
         </div>
 
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
-
+            <form name="myform" id="myform" method="post" action="<?php echo U('Admin/act/destoryBatch');?>">
+                <div class="result-title">
+                    <div class="result-list">
+                        <button id="batchDel"  type="submit"><i class="icon-font"></i>批量删除</button>
+                    </div>
+                </div>
                 <div class="result-content">
                     <table class="result-tab" width="100%">
                         <tr>
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
-                            <th>ID</th>
-                            <th>用户名</th>
-                            <th>标签</th>
-                            <th>头像</th>
+                            <th>用户ID</th>
+                            <th>类型</th>
+                            <th>时间段</th>
                             <th>发布时间</th>
                             <th>内容</th>
                             <th>配图</th>
                             <th>编辑</th>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
+                        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
+                            <td class="tc"><input name="id[]" value="<?php echo ($vo["aid"]); ?>" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
+                                <input class="common-input sort-input" name="ord[]" value="<?php echo ($vo["aid"]); ?>" type="text">
                             </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td><?php echo ($vo["pid"]); ?></td>
+                            <td><?php echo ($vo["class"]); ?></td>
+                            <td><?php echo ($vo["timeslot"]); ?></td>
+                            <td><?php echo ($vo["sendtime"]); ?></td>
+                            <td><?php echo ($vo["ncontent"]); ?></td>
+                            <td width="80px"><img src="/html5-qiuqiu/thinkphp_qiuqiu/Public/uploads<?php echo ($vo["uploadpic"]); ?>" height="80px" width="80px"></td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="<?php echo U('Admin/act/edit');?>/aid/<?php echo ($vo["aid"]); ?>">修改</a>
+                                <a class="link-del" href="<?php echo U('Admin/act/destory');?>/aid/<?php echo ($vo["aid"]); ?>">删除</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
 
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> <?php echo ($page); ?></div>
                 </div>
             </form>
         </div>

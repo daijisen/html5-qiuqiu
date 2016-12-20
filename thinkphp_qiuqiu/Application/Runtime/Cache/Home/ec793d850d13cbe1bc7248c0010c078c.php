@@ -4,14 +4,14 @@
 <title>Comment</title>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/thinkphp_3.2.3/Public/front/css/jquery.mobile-1.4.5.min.css" />
-    <link rel='stylesheet' id='camera-css'  href='/thinkphp_3.2.3/Public/front/css/camera.css' type='text/css' media='all'/>
-    <script src="/thinkphp_3.2.3/Public/front/js/jquery-2.2.2.js"></script>
-    <script src="/thinkphp_3.2.3/Public/front/js/jquery.mobile-1.4.5.min.js"></script>
-    <script type='text/javascript' src='/thinkphp_3.2.3/Public/front/scripts/jquery.min.js'></script>
-    <script type='text/javascript' src='/thinkphp_3.2.3/Public/front/scripts/jquery.mobile.customized.min.js'></script>
-    <script type='text/javascript' src='/thinkphp_3.2.3/Public/front/scripts/jquery.easing.1.3.js'></script>
-    <script type='text/javascript' src='/thinkphp_3.2.3/Public/front/scripts/camera.min.js'></script>
+    <link rel="stylesheet" href="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/css/jquery.mobile-1.4.5.min.css" />
+    <link rel='stylesheet' id='camera-css'  href='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/css/camera.css' type='text/css' media='all'/>
+    <script src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/jquery-2.2.2.js"></script>
+    <script src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/js/jquery.mobile-1.4.5.min.js"></script>
+    <script type='text/javascript' src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/scripts/jquery.min.js'></script>
+    <script type='text/javascript' src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/scripts/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/scripts/jquery.easing.1.3.js'></script>
+    <script type='text/javascript' src='/html5-qiuqiu/thinkphp_qiuqiu/Public/front/scripts/camera.min.js'></script>
 </head>
 <body>
 <div data-role=“page” id="Comment">
@@ -21,7 +21,7 @@
    <a href="<?php echo U('Home/person/Comment');?>" data-role="button" class="ui-btn ui-corner-all ui-icon-recycle ui-btn-icon-notext"></a>
 </div>
 <div data-role="content" align="center">
-<img src="/thinkphp_3.2.3/Public/front/images/2.png" >
+<img src="/html5-qiuqiu/thinkphp_qiuqiu/Public/front/images/2.png" >
 <p>暂无点评</p>
 </div>
 <div data-dole="footer">
