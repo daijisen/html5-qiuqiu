@@ -5,12 +5,13 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="css/sm.min.css">
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
     <script type='text/javascript' src="js/zepto.min.js" charset='utf-8'></script>
     <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
     <link rel="stylesheet" href="css/sm.min,sm-extend.min.css">
     <script type='text/javascript' src='js/sm.min,sm-extend.min.js' charset='utf-8'></script>
     <script src="icon/iconfont.js"></script>
-    <title>首页</title>
+    <title>首页-评论</title>
     <style type="text/css">
         .icon {
             width: 35px; height: 35px;
@@ -19,13 +20,8 @@
         .bar.bar-nav{
             background: url("image/1.png");
         }
-        .page{
-            background: url("image/6.jpg");
-        }
-        .bar.bar-tab{
-            background: url("image/15.jpg");
-        }
-        .xuanze{
+
+        .xuanze1{
             background-color: blue;
         }
         #tab1{
@@ -51,11 +47,15 @@
         <header class="bar bar-nav">
 
             <h1 class="title" style="color: white">
+                <a class="button button-link button-nav pull-left back" href="newindex.html">
+                    <span class="icon icon-left"></span>
+                    返回
+                </a>
                 <svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
                     <use xlink:href="#icon-xiao"></use>
                 </svg>
                 求球
-                <select class="xuanze">
+                <select class="xuanze1">
                     <option>河北师范大学</option>
                     <option>河北科技大学</option>
                 </select>
@@ -165,73 +165,41 @@
 
                 </div>
                 <div id="tab2" class="tab">
-                    <div class="content-block">
-                        <div id="commend">
-                            <div data-role="navbar" id="bq">
-
-                                <ul >
-
-                                    <li ><a href="#" data-role="button" onclick="ChangeDiv('0','Div_',2)" class="ui-btn-active" >团队</a></li>
-
-                                    <li ><a href="#" data-role="button" onclick="ChangeDiv('1','Div_',2)" >评论</a></li>
-
-                                </ul>
-                            </div>
-                            <div id="Div_0" >
-                                <div class="ping1" >
-                                    <div class="ping2">
-                                        <div class="ping21">
-                                            <img src="./image/tx.jpg">
+                    <div class="list-block media-list">
+                        <ul class="card1">
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img class="aim" src="./image/tx.jpg" style='width: 2.2rem;'></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">丑森</div>
                                         </div>
-                                        <div class="ping22">
-                                            <span class="ping221"><h2>想增肥的请举手</h2></span>
-                                            <span class="ping222"><p>来自手机客户端</p></span>
-                                        </div>
+                                        <div class="item-subtitle">软件最强守门员</div>
                                     </div>
                                 </div>
-                                <div class="ping1" >
-                                    <div class="ping2">
-                                        <div class="ping21">
-                                            <img src="./image/tx.jpg">
+                                <p class="ping">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block media-list">
+                        <ul class="card1">
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img class="aim" src="./image/tx.jpg" style='width: 2.2rem;'></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">丑森</div>
                                         </div>
-                                        <div class="ping22">
-                                            <span class="ping221"><h2>想增肥的请举手</h2></span>
-                                            <span class="ping222"><p>来自手机客户端</p></span>
-                                        </div>
+                                        <div class="item-subtitle">软件最强守门员</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="Div_1" style="display:none">
-                                <div class="ping1" >
-                                    <div class="ping2">
-                                        <div class="ping21">
-                                            <img src="./image/tx.jpg">
-                                        </div>
-                                        <div class="ping22">
-                                            <span class="ping221"><h2>想增肥的请举手</h2></span>
-                                            <span class="ping222"><p>来自手机客户端</p></span>
-                                        </div>
-                                    </div>
-                                    <div class="ping3">
-                                        <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
-                                    </div>
-                                </div>
-                                <div class="ping1" >
-                                    <div class="ping2">
-                                        <div class="ping21">
-                                            <img src="./image/tx.jpg">
-                                        </div>
-                                        <div class="ping22">
-                                            <span class="ping221"><h2>想增肥的请举手</h2></span>
-                                            <span class="ping222"><p>来自手机客户端</p></span>
-                                        </div>
-                                    </div>
-                                    <div class="ping3">
-                                        <p class="ping31">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                <p class="ping">沃尔的人品和球品都很好，感觉沃尔是最被忽略的球星。加油，我墙我永远支持你</p>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
                     </div>
                 </div>
             </div>

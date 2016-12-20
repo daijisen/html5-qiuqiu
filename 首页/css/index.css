@@ -2,35 +2,54 @@
             width: 35px; height: 35px;
 
         }
-        .bar.bar-nav{
-            background: url("image/1.png");
+.bar.bar-nav{
+            background: url("../image/1.png");
         }
-        .page{
-            background: url("image/6.jpg");
+.page{
+            background: url("../image/6.jpg");
         }
-        .bar.bar-tab{
-            background: url("image/15.jpg");
+.bar.bar-tab{
+            background: url("../image/15.jpg");
         }
-        .xuanze{
-            background-color: blue;
-        }
-        #tab1{
+.xuanze1{
+    background-color: cadetblue;
+}
+#tab1{
             margin: 0px;
         }
-        .list-block{
+.list-block{
             margin-top: 0px;
             margin-bottom: 0px;
         }
-        .aim{
+.aim{
             border-radius:15px;box-shadow: 0 0 3px #000;
         }
-        .card{
+.card{
             margin-left: 0px;margin-right: 0px;margin-top:0px; 
         }
-        .badge{background-color: white;margin-bottom: 3px; padding-bottom: 0px}
+.badge{background-color: white;margin-bottom: 3px; padding-bottom: 0px}
         .list-block{border-bottom: 1px solid;border-bottom-color: rgb(221,221,221)}
 
+#content{
+    padding: 0px;
+    margin: 0px;
+}
+#tab2{
+    margin: 0px;
+}
+.cdp{
 
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+.ping{
+    width: 80%;
+    margin-top:0px;
+    margin-bottom: 0px;
+   margin-left: 20%;
+}
 
 
 
