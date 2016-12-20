@@ -205,8 +205,8 @@ $(function () {
 
   //对话框
   $(document).on("pageInit", "#page-modal", function(e, id, page) {
-    var $content = $(page).find('.content');
-    $content.on('click','.alert-text',function () {
+    var $content = $(page).find('.bar.bar-nav');
+    $content.on('click','.alert',function () {
       $.alert('这是一段提示消息');
     });
 
@@ -230,6 +230,25 @@ $(function () {
       });
     });
   });
+
+
+  //发布页
+  $(document).on("pageInit", "#page-fabu", function(e, id, page) {
+    var $content = $(page).find('.bar.bar-nav');
+    $content.on('click', '.alert', function () {
+      var text1=document.getElementById("zutuan");
+
+      if(text1.value=="")
+      {
+        $.alert("不能为空哦！");
+      }else {
+        $.alert("发布成功！");
+      }
+
+    });
+  });
+
+
 
   //操作表
   $(document).on("pageInit", "#page-action", function(e, id, page) {
