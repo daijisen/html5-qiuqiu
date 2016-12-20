@@ -59,7 +59,7 @@
       <file leaf-file-name="commend.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/首页/commend.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
+            <state relative-caret-position="323">
               <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -346,7 +346,7 @@
       <workItem from="1481449951544" duration="2892000" />
       <workItem from="1481701241839" duration="1065000" />
       <workItem from="1481703868842" duration="5531000" />
-      <workItem from="1482196145142" duration="241000" />
+      <workItem from="1482196145142" duration="370000" />
     </task>
     <task id="LOCAL-00001" summary="综合所有网页">
       <created>1481704342295</created>
@@ -355,17 +355,24 @@
       <option name="project" value="LOCAL" />
       <updated>1481704342295</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="首页团队评论页">
+      <created>1482196411366</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1482196411366</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9729000" />
+    <option name="totallyTimeSpent" value="9858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18374817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18374817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -396,7 +403,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="综合所有网页" />
-    <option name="LAST_COMMIT_MESSAGE" value="综合所有网页" />
+    <MESSAGE value="首页团队评论页" />
+    <option name="LAST_COMMIT_MESSAGE" value="首页团队评论页" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -670,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/首页/commend.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="323">
           <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
           <folding>
             <element signature="n#style#0;n#h1#0;n#header#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
