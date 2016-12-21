@@ -1004,37 +1004,39 @@
     </div>
     <!--发布页-->
     <div class="page" id="page-fabu">
+
+        <form action="{:U('Home/index/store')}" method="post">
         <header class="bar bar-nav">
-            <a href="#index">
+            <a href="#" class="back"data-no-cache="true">
                 <svg class="icon pull-left" aria-hidden="true">
-                    <use xlink:href="#icon-quxiao1" class="shouhui"></use>
+                    <use xlink:href="#icon-quxiao" class="shouhui"></use>
                 </svg>
             </a>
-            <h1 class="title">我要组团</h1>
-            <a href="#">
-                <svg class="icon pull-right" aria-hidden="true">
-                    <use xlink:href="#icon-ok" class="shouhui"></use>
+            <h1 class="title" style="color: white">我要组团</h1>
+            <a href="#" type="submit" class=" button-success alert">
+                <svg class="icon pull-right fabu" aria-hidden="true">
+                    <use xlink:href="#icon-zhengque" class="shouhui"></use>
                 </svg>
             </a>
         </header>
 
         <!-- 工具栏 -->
         <nav class="bar bar-tab">
-            <a class="tab-item external" href="#">
+            <a class="tab-item" href="#">
                 <span class="icon">
                     <svg class="icon1" aria-hidden="true">
                        <use xlink:href="#icon-weixiao" class="shouhui"></use>
                     </svg>
                 </span>
             </a>
-            <a class="tab-item external" href="#">
+            <a class="tab-item " href="#page-modal">
                 <span class="icon">
                     <svg class="icon1" aria-hidden="true">
                        <use xlink:href="#icon-xiangce" class="shouhui"></use>
                     </svg>
                 </span>
             </a>
-            <a class="tab-item external" href="#">
+            <a class="tab-item " href="#">
                 <span class="icon">
                     <svg class="icon1" aria-hidden="true">
                        <use xlink:href="#icon-xiangji" class="shouhui"></use>
@@ -1046,7 +1048,9 @@
 
         <!-- 这里是页面内容区 -->
         <div class="content fabu"  >
+
             <div class="content-block">
+                <button type="submit" class="button button-big button-fill button-success" style="width: 100%">发布</button>
                 <div class="list-block">
                     <ul>
                         <!-- Text inputs -->
@@ -1055,7 +1059,28 @@
                                 <div class="item-inner">
 
                                     <div class="item-input">
-                                        <input type="text" placeholder="选择分类" id='picker-ball' readonly/>
+                                        <input name="pid"  value="{$user.pid}" type="hidden">
+                                        <input type="text" placeholder="选择分类" name="class" id='picker-ball'class="fenlei" readonly/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+
+                                    <div class="item-input">
+                                        <input type="text" placeholder="时间段" name="timeslot" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+
+                                    <div class="item-input">
+                                        <input type="file" name="uploadpic" />
                                     </div>
                                 </div>
                             </div>
@@ -1064,14 +1089,32 @@
                 </div>
             </div>
 
-            <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来组团吧~"></textarea>
+            <textarea  name="ncontent" id="zutuan" class="shuru"data-position="incline" type="number" placeholder="快来组团吧~"></textarea>
 
         </div>
+        </form>
     </div>
     <!--个人中心页-->
     <div class="page" id="me">
         <header class="bar bar-nav">
-            <h1 class="title" style="color: white">求球</h1>
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
+
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
         </header>
         <!-- 你的html代码 -->
         <!-- 这里是页面内容区 -->
@@ -1122,6 +1165,16 @@
             </div>
             <div class="list-block d3">
                 <ul>
+                    <li ><a href="#ziliao" class="item-content item-link">
+                        <div class="item-media">
+                            <svg class="icon qiu" aria-hidden="true">
+                                <use xlink:href="#icon-qiugan" class="qiu"></use>
+                            </svg>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">编辑资料</div>
+                        </div></a>
+                    </li>
 
                     <li ><a href="#set" class="item-content item-link">
                         <div class="item-media">
@@ -1133,6 +1186,7 @@
                             <div class="item-title">设置</div>
                         </div></a>
                     </li>
+
 
                     <li><a href="#shop" class="item-content item-link">
                         <div class="item-media">
@@ -1162,7 +1216,7 @@
                             <div class="item-title">夜间模式</div>
                             <div class="item-after">
                                 <div class="item-input">
-                                    <label class="label-switch" id="night">
+                                    <label class="label-switch">
                                         <input type="checkbox">
                                         <div class="checkbox"></div>
                                     </label>
@@ -1175,8 +1229,7 @@
             </div>
         </div>
         <nav class="bar bar-tab">
-
-            <a class="tab-item active" href="#index">
+            <a class="tab-item" href="#index">
                 <span class="icon">
                     <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-feihang" class="shouhui"></use>
@@ -1184,7 +1237,7 @@
                 </span>
                 <span class="tab-label">首页</span>
             </a>
-            <a class="tab-item  active" href="#news">
+            <a class="tab-item " href="#news">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-hengqiu" class="shouhui"></use>
@@ -1192,7 +1245,7 @@
                 </span>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
+            <a class="tab-item " href="#page-fabu">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-xingqiu" class="shouhui"></use>
@@ -1200,7 +1253,7 @@
                 </span>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
+            <a class="tab-item  active" href="#me">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
@@ -1210,7 +1263,96 @@
             </a>
         </nav>
 
+    </div>
+    <!--编辑资料-->
+    <div class="page" id="ziliao">
+        <header class="bar bar-nav">
+            <a href="#me">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">更改</h1>
+        </header>
+        <div class="content">
+            <form action="{:U('Home/index/update')}" method="post" id="myform" name="myform" enctype="multipart/form-data">
+            <div class="list-block">
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label" style="color: #00a0df">昵称</div>
+                                <div class="item-input">
+                                    <input name="pid"  value="{$user.pid}" type="hidden">
+                                    <input value="{$user.username}" type="text" name="username" >
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-email"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label" style="color: #00a0df">邮箱</div>
+                                <div class="item-input">
+                                    <input type="email" value="{$user.email}" name="email" >
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label" style="color: #00a0df">学校</div>
+                                <div class="item-input">
+                                    <input type="text"  value="{$user.university}" name="university"  class="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
+                    <!-- Date -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-gender"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label" style="color: #00a0df">性别</div>
+                                <div class="item-input">
+                                    <select name="gender">
+                                        <option value="{$user.gender}">{$user.gender}</option>
+                                        <option value="糙汉子">糙汉子</option>
+                                        <option value="萌妹子">萌妹子</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- Switch (Checkbox) -->
+
+                    <li class="align-top">
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-comment"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label" style="color: #00a0df">个性签名</div>
+                                <div class="item-input">
+                                    <textarea  name="signature"  placeholder="介绍自己一下吧~">{$user.signature}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-warning back" >取消</a></div>
+                    <div class="col-50"><button type="submit" class="button button-big button-fill button-warning" style="width: 100%">提交</button></div>
+                </div>
+            </div>
+            </form>
+        </div>
     </div>
     <!--设置-->
     <div class="page" id="set">
