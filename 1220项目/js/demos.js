@@ -218,11 +218,13 @@ $(function () {
       {
         $.alert("不能为空哦！");
       }else {
-        $.alert("发布成功！");
+        $.alert("发布成功！");$.router.load("#index",true);  //加载内联页面
       }
 
     });
   });
+  //reload
+  $(document).on("pageRemoved", "#page-fabu", function(e, pageId, $page) {});
 
 
 
