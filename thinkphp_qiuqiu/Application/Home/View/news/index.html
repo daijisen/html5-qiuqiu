@@ -108,12 +108,12 @@
     <div class="page-group">
         <div class="page" id="news-content">
         <header class="bar bar-nav">
-            <a href="#zhongchao">
+            <a href="#" class="back">
                 <svg class="icon pull-left" aria-hidden="true">
                     <use xlink:href="#icon-shouhui02" class="shouhui"></use>
                 </svg>
             </a>
-            <h1 class="title">NBA</h1>
+            <h1 class="title">{$newsContent.name}</h1>
             <button class="button button-link button-nav pull-right">
                 <a href="#" style="color: white"> 刷新</a>
             </button>
@@ -122,13 +122,12 @@
 
         <div class="content">
             <div class="content-padded">
-                <h2>赛后，勇士胜鹈鹕，库里破三分记录<br><small>来源：虎扑体育</small></h2>
+                <h2 style="font-family: 华文仿宋">{$newsContent.title}<br><small style="font-size: 12px;color: dimgray">来源：{$newsContent.source}</small></h2>
                 <div>
-                    <img src="__PUBLIC__/front/image/10.jpg" style="width: 100%">
+                    <img src="__PUBLIC__/uploads{$newsContent.newpic}" style="width: 100%">
                 </div>
 
-                <p>体育11月8日讯 今天勇士回到主场迎战鹈鹕，戴维斯首节就砍下12分让鹈鹕稍占上风，而找到手感的库里单节命中三记三分将比分反差，此届初在双方轮换阵容短暂
-                    的相持后，勇士连续打出反击，期间库里再命中三记三分，率队打出一波20-3瞬间拉开比分，戴维斯带队趁势反击完成反超。</p>
+                <p>{$newsContent.ncontent}</p>
             </div>
             <div class="list-block news">
                 <ul>
