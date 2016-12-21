@@ -22,6 +22,7 @@
                             <th>类名</th>
                             <th>标题</th>
                             <th>图片</th>
+                            <th>来源</th>
                             <th>更新时间</th>
                             <th>操作</th>
                         </tr>
@@ -36,6 +37,7 @@
                             <td>{$vo.name}</td>
                             <td>{$vo.title}</td>
                             <td width="80px"><img src="__PUBLIC__/uploads{$vo.newpic}" height="80px" width="80px"></td>
+                            <td>{$vo.source}</td>
                             <td>{$vo.updatetime}</td>
                             <td>
                                 <a class="link-update" href="{:U('Admin/news/edit')}/nid/{$vo.nid}">修改</a>
