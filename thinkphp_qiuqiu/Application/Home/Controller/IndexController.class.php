@@ -5,13 +5,17 @@ class IndexController extends Controller {
     public function index(){
 
         if(isset($_SESSION['username'])){
-
             //首页信息获取
                 $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic
                                          from users x,acts y
-                                         where x.pid = y.pid ");
+                                         where x.pid = y.pid
+                                         order by aid desc");
 
                 $this->assign('indexdata',$indexData);
+                //团队人数统计
+                //$sqlTeam = "select y.*,num from team y,(select *,count(*) num from team group by aid) x where y.aid = x.aid order by tid";
+                //$tnum = M()->query($sqlTeam);
+                //dump($tnum);
 
             //新闻获取
                //NBA
@@ -42,11 +46,22 @@ class IndexController extends Controller {
                 $this->assign('user',$userData[0]);
 
                 //有人叫我 界面
-                $yrSql = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content
+                $yrSql1 = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content
+                                          from users x,users y,acts,reply
+                                          where reply.aid = acts.aid and reply.pid = y.pid and acts.pid = x.pid and x.pid = $pid";
+                $yrData1 = M()->query($yrSql1);
+                                $this->assign('yrData1',$yrData1);
+                $yrSql2 = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content,count(y.pid) num
                           from users x,users y,acts,reply
                           where reply.aid = acts.aid and reply.pid = y.pid and acts.pid = x.pid and x.pid = $pid";
-                $yrData = M()->query($yrSql);
-                $this->assign('yrData',$yrData);
+                $yrData2 = M()->query($yrSql2);
+                if($yrData2[0][num] == 0){
+                    $this->assign('yrData2',null);
+                }else{
+                    $this->assign('yrData2',$yrData2[0]);
+                }
+
+
 
         }else{
 
@@ -77,7 +92,8 @@ class IndexController extends Controller {
             //首页信息获取
                 $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic
                                          from users x,acts y
-                                         where x.pid = y.pid ");
+                                         where x.pid = y.pid
+                                         order by aid desc");
 
                 $this->assign('indexdata',$indexData);
 
@@ -88,14 +104,13 @@ class IndexController extends Controller {
                 $this->assign('user',$userData[0]);
 
                 //有人叫我 界面
-                $yrSql = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content
-                          from users x,users y,acts,reply
-                          where reply.aid = acts.aid and reply.pid = y.pid and acts.pid = x.pid";
-                $yrData = M()->query($yrSql);
+
+                $this->assign('yrData',null);
+
 
         }
 
-     $this->display();
+    $this->display();
     }
 
     public function update(){
@@ -147,6 +162,7 @@ class IndexController extends Controller {
 
             if($actModel->add($data))
             {
+                 $actModel =
                  $this->success('数据添加成功','index');
             }
             else{
