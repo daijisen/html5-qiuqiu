@@ -329,6 +329,9 @@ $(function () {
       ]
     });
   });
+
+
+
   $(document).on("pageInit", "#page-datetime-picker", function(e) {
     $("#datetime-picker").datetimePicker({
       toolbarTemplate: '<header class="bar bar-nav">\
