@@ -27,7 +27,7 @@ class LoginController extends Controller {
                         session('username', $result['username']);   // 当前用户名
                         // 更新用户登录信息
                         $where['pid'] = session('uid');  // 更新登录时间和登录ip
-                        $this->success('登录成功,正跳转至系统首页...', U('Index/index'));
+                        $this->redirect("Index/index");
                     } else {
                         $this->error('登录失败,用户名或密码不正确!',U('login/login'));
                     }
