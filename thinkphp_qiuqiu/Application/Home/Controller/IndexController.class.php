@@ -41,7 +41,12 @@ class IndexController extends Controller {
                 $userData = $userModel->where("pid=$pid")->select();
                 $this->assign('user',$userData[0]);
 
-
+                //有人叫我 界面
+                $yrSql = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content
+                          from users x,users y,acts,reply
+                          where reply.aid = acts.aid and reply.pid = y.pid and acts.pid = x.pid and x.pid = $pid";
+                $yrData = M()->query($yrSql);
+                $this->assign('yrData',$yrData);
 
         }else{
 
@@ -81,9 +86,16 @@ class IndexController extends Controller {
                 $userModel = M("users");
                 $userData = $userModel->where("pid=$pid")->select();
                 $this->assign('user',$userData[0]);
+
+                //有人叫我 界面
+                $yrSql = "select x.username pname,x.head phead,acts.class,acts.ncontent,y.head rhead,y.username rname,y.signature rsignature,reply.content
+                          from users x,users y,acts,reply
+                          where reply.aid = acts.aid and reply.pid = y.pid and acts.pid = x.pid";
+                $yrData = M()->query($yrSql);
+
         }
 
-        $this->display();
+     $this->display();
     }
 
 }
