@@ -98,4 +98,60 @@ class IndexController extends Controller {
      $this->display();
     }
 
+    public function update(){
+            $userModel = M('users');
+            $data = $userModel->create();
+
+            if($userModel->save($data) )
+            {
+                $this->success('数据更新成功！','index');
+            }
+            else{
+                $this->error('数据更新失败');
+            }
+        }
+
+    public function store(){
+            //生成模型对象
+            $actModel = M('acts');
+            // 根据表单提交的POST数据创建数据对象
+            $data = $actModel->create();
+
+            //上传图片
+
+            $upload = new \Think\Upload();
+            // 实例化上传类
+            $upload->maxSize = 3145728 ;
+            // 设置附件上传大小
+            $upload->ext  = array('jpg', 'gif', 'png', 'jpeg');
+            // 设置附件上传类型
+            $upload->rootPath = './Public/uploads/';
+             // 设置附件上传根目录
+            $upload->savePath = '/actPic/';
+             // 设置附件上传（子）目录 // 上传文件
+            $info = $upload->upload();
+
+            if(!$info) {
+                              $this->error($upload->getError());
+            }else{
+                // 上传成功
+                 foreach($info as $file){
+                    $data["uploadpic"] = $file['savepath'].$file['savename'];
+                 };
+
+             }
+             $time = date("Y-m-d H:i:s");
+             $data['sendtime'] = $time;
+
+
+
+            if($actModel->add($data))
+            {
+                 $this->success('数据添加成功','index');
+            }
+            else{
+                $this->error('数据添加失败');
+            }
+    }
+
 }
