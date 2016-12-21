@@ -63,7 +63,7 @@ class NewsController extends Controller {
                 };
 
             }
-            $time = date("Y-m-d H:i:s");
+            $time = date("Y-m-d");
             $data['updatetime'] = $time;
 
 
@@ -114,7 +114,9 @@ class NewsController extends Controller {
                            $data["newpic"] = $file['savepath'].$file['savename'];
                         };
 
-                    }
+                   }
+                   $time = date("Y-m-d");
+                   $data['updatetime'] = $time;
 
            if($newModel->save($data) )
            {
