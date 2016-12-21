@@ -33,8 +33,9 @@
     .tx{
         border: 1px solid #dedede;border-radius:50%;overflow: hidden;
     }
-    .tab-item.external.active{
-        background-color: #cbc5c8;
+    .active{
+        background: url("__PUBLIC__/front/image/20.jpg");
+        color: #895953;
     }
     .icon.pull-left{
         width: 2em;
@@ -102,6 +103,18 @@
         margin-bottom: 10px;
         margin-top: 10px;
     }
+    .fabu{
+        fill: white;
+    }
+    .shuaxin{
+        fill: white;
+    }
+    .logo{
+        fill: white;
+    }
+    .fashe{
+        fill: white;
+    }
 </style>
 <body>
 <div class="cover">
@@ -109,12 +122,20 @@
     <!--首页-->
     <div class="page page-current" id="index">
         <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
 
             <h1 class="title" style="color: white">
-                <svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
-                    <use xlink:href="#icon-xiao"></use>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
                 </svg>
-                求球
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
             </h1>
             <button class="button button-link button-nav pull-right">
 
@@ -122,41 +143,32 @@
         </header>
         <div class="content"></div>
         <nav class="bar bar-tab">
-
-            <a class="tab-item active" href="#index">
-                <span class="icon">
-                    <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-feihang" class="shouhui"></use>
-                    </svg>
-                </span>
+            <a class="tab-item  active" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-feihang"></use>
+                </svg>
                 <span class="tab-label">首页</span>
             </a>
-            <a class="tab-item  active" href="#news">
-                <span class="icon">
-                     <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
-                    </svg>
-                </span>
+            <a class="tab-item " href="#news">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-hengqiu"></use>
+                </svg>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
-                <span class="icon">
-                     <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
-                    </svg>
-                </span>
+            <a class="tab-item " href="#page-fabu">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xingqiu"></use>
+                </svg>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
-                <span class="icon">
-                     <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
-                    </svg>
-                </span>
+            <a class="tab-item " href="#me">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yuhangyuan"></use>
+                </svg>
                 <span class="tab-label">我的</span>
             </a>
-        </nav>
 
+        </nav>
         <div class="content">
             <volist name="indexdata" id="vo">
                 <div class="card facebook-card">
@@ -176,22 +188,22 @@
                         </div>
                     </div>
                     <div class="card-footer no-border">
-                        <a href="#" class="link">
+                        <a href="#comment" class="link">
 						<span class="badge">
-							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-duoseqiu"></use>
-						</svg>团队（{$vo.num}/10)</span>
+						</svg>团队（2/10)</span>
                         </a>
-                        <a href="#" class="link">
+                        <a href="#team" class="link">
 						<span class="badge">
-							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-huojian"></use>
 						</svg>加入团队
 						</span>
                         </a>
-                        <a href="#" class="link">
+                        <a href="#pinglun" class="link">
 						<span class="badge">
-							<svg class="icon-pinglun" aria-hidden="true" style="width: 30px;height: 30px">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-yuhangyuan2"></use>
 						</svg>评论一波
 						</span>
@@ -201,96 +213,356 @@
             </volist>
         </div>
     </div>
-    <!--新闻列表页-->
-    <div class="page" id="news">
-    <!-- 标题栏 -->
-    <header class="bar bar-nav">
+    <!--首页评论-->
+    <div class="page" id="comment">
+        <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-shouhui02" class="shouhui"></use>
+                </svg>
+            </a>
 
-        <h1 class="title" style="color: white">求球</h1>
-    </header>
+            <h1 class="title" style="color: white">
+                <svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+                    <use xlink:href="#icon-xiao"></use>
+                </svg>
+                求球
+            </h1>
+        </header>
 
-    <!-- 工具栏 -->
-    <nav class="bar bar-tab">
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="#team" style="background-color: #cbcbc9">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-feihang"></use>
+                </svg>
+                <span class="tab-label">我要加入</span>
+            </a>
+            <a class="tab-item " href="#pinglun" style="background-color: #cacba7">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-hengqiu"></use>
+                </svg>
+                <span class="tab-label">商量一下</span>
+            </a>
 
-        <a class="tab-item active" href="#index">
-                <span class="icon">
-                    <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-feihang" class="shouhui"></use>
-                    </svg>
-                </span>
-            <span class="tab-label">首页</span>
-        </a>
-        <a class="tab-item  active" href="#news">
-                <span class="icon">
-                     <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
-                    </svg>
-                </span>
-            <span class="tab-label">新闻</span>
-        </a>
-        <a class="tab-item active" href="#page-fabu">
-                <span class="icon">
-                    <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
-                    </svg>
-                </span>
-            <span class="tab-label">组团</span>
-        </a>
-        <a class="tab-item active" href="#me">
-                <span class="icon">
-                    <svg class="icon d4" aria-hidden="true">
-                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
-                    </svg>
-                </span>
-            <span class="tab-label">我的</span>
-        </a>
-    </nav>
+        </nav>
+        <div class="content">
+            <div class="card facebook-card">
+                <div class="card-header no-border">
+                    <div class="facebook-avatar"><img class="aim" src="__PUBLIC__/front/image/tx.jpg" width="38" height="38"></div>
+                    <div class="facebook-name">自诩</div>
+                    <div class="facebook-date">软件梅西，不服来辩</div>
+                </div>
+                <div class="card-content">
+                    <img src="__PUBLIC__/front/image/bj.jpg" width="100%">
+                    <div class="card-content-inner">
+                        <div class="content-block">
+                            <p>#<a >足球</a>#</p>
+                            <p>中午12点西操场有踢球的没？</p>
 
-    <!-- 这里是页面内容区 -->
-    <div class="content">
+                        </div>
+                    </div>
+                </div>
 
-
-        <div class="content-block tag">
-            <div class="row">
-                <div class="col-20"><a href="#" class="button button-big button-fill button-danger">NBA</a></div>
-                <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
-                <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
-                <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
-                <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
             </div>
-        </div>
-        <div class="list-block media-list tag">
-            <ul>
-                <volist name="newsNBA" id="vo">
-                    <li>
-                        <a href="{:U('Home/news/index')}/nid/{$vo.nid}" class="item-link item-content external" >
-                            <div class="item-media"><img src="__PUBLIC__/uploads{$vo.newpic}" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">{$vo.title}</div>
+
+
+            <div class="buttons-tab">
+                <a href="#tab1" class="tab-link active button">队伍</a>
+                <a href="#tab2" class="tab-link button">商量</a>
+            </div>
+            <div class="tabs">
+                <div id="tab1" class="tab active">
+
+                    <div class="list-block media-list"style="margin-top: 0px">
+                        <ul>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
+
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">用户1</div>
+                                        </div>
+                                        <div class="item-subtitle">个性简介</div>
+                                    </div>
                                 </div>
+                            </li>
 
-                                <div class="item-text" style="font-size: 12px;color: darkgray">来源：{$vo.source}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.updatetime}</div>
-                            </div>
-                        </a>
-                    </li>
-                </volist>
-            </ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
+
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">用户1</div>
+                                        </div>
+                                        <div class="item-subtitle">个性简介</div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div id="tab2" class="tab">
+                    <div class="list-block media-list"style="margin-top: 0px">
+                        <ul>
+
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
+
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">用户1</div>
+                                        </div>
+                                        <div class="item-subtitle">个性简介</div>
+                                    </div>
+                                    <div class="item-media" style="padding-right: 50px">
+                                        <a href="#"><svg class="icon" aria-hidden="true" style="width: 20px;height: 20px">
+                                            <use xlink:href="#icon-marker"></use>
+                                        </svg>
+                                            回复</a>
+                                    </div>
+                                </div>
+                                <div class="item-inner" style="padding-left: 40px">
+                                    一起踢球啊
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
         </div>
-    </div>
-</div>
-    <!--CBA-->
-    <div class="page" id="cba">
-        <!-- 标题栏 -->
-        <header class="bar bar-nav ">
 
-            <h1 class="title">求球</h1>
+
+    </div>
+    <!--回复评论-->
+    <div class="page" id="huifu">
+        <header class="bar bar-nav">
+            <a href="#callme">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-quxiao1" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color:white;">我要评论</h1>
+            <a href="#callme">
+                <svg class="icon pull-right fashe" aria-hidden="true">
+                    <use xlink:href="#icon-zhengque" class="shouhui"></use>
+                </svg>
+            </a>
         </header>
 
         <!-- 工具栏 -->
         <nav class="bar bar-tab">
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-weixiao" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-xiangce" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-xiangji" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
 
-            <a class="tab-item active" href="#index">
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content fabu"  >
+
+
+            <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来评论吧~~"></textarea>
+
+        </div>
+    </div>
+    <!--评论-->
+    <div class="page" id="pinglun">
+        <header class="bar bar-nav">
+            <a href="#comment">
+                <svg class="icon pull-left" aria-hidden="true">
+                    <use xlink:href="#icon-quxiao1" class="shouhui"></use>
+                </svg>
+            </a>
+            <h1 class="title" style="color: white">我要评论</h1>
+            <a href="#comment">
+                <svg class="icon pull-right fashe" aria-hidden="true">
+                    <use xlink:href="#icon-zhengque" class="shouhui"></use>
+                </svg>
+            </a>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-weixiao" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-xiangce" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
+            <a class="tab-item external" href="#">
+                <span class="icon">
+                    <svg class="icon1" aria-hidden="true">
+                       <use xlink:href="#icon-xiangji" class="shouhui"></use>
+                    </svg>
+                </span>
+            </a>
+
+        </nav>
+
+        <!-- 这里是页面内容区 -->
+        <div class="content fabu"  >
+
+
+            <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来评论吧~~"></textarea>
+
+        </div>
+    </div>
+    <!--加入团队-->
+    <div class="page" id="team">
+        <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
+
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+
+        </header>
+        <div class="content"></div>
+        <nav class="bar bar-tab">
+            <a class="tab-item  active" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-feihang"></use>
+                </svg>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item " href="#news">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-hengqiu"></use>
+                </svg>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item " href="#page-fabu">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-xingqiu"></use>
+                </svg>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item " href="#me">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-yuhangyuan"></use>
+                </svg>
+                <span class="tab-label">我的</span>
+            </a>
+
+        </nav>
+        <div class="content">
+            <div class="card facebook-card">
+                <div class="card-header no-border">
+                    <div class="facebook-avatar"><img class="tx" src="image/tx.jpg" width="34" height="34"></div>
+                    <div class="facebook-name">自诩</div>
+                    <div class="facebook-date">软件梅西，不服来辩</div>
+                </div>
+                <div class="card-content"><a href="#comment">
+                    <img src="image/bj.jpg" width="100%">
+                    <div class="card-content-inner">
+                        <div class="content-block">
+                            <p>#<a >足球</a>#</p>
+                            <p>中午12点西操场有踢球的没？</p>
+
+                        </div>
+                    </div></a>
+                </div>
+                <div class="card-footer no-border">
+                    <a href="#" class="link">
+						<span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-duoseqiu"></use>
+						</svg>团队（2/10)</span>
+                    </a>
+
+                    <span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-feichuan"></se>
+						</svg>已加入
+						</span>
+
+                    <a href="#" class="link">
+						<span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-yuhangyuan2"></use>
+						</svg>评论一波
+						</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--新闻列表页-->
+    <div class="page" id="news">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
+
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
+        </header>
+
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item" href="#index">
                 <span class="icon">
                     <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-feihang" class="shouhui"></use>
@@ -298,7 +570,7 @@
                 </span>
                 <span class="tab-label">首页</span>
             </a>
-            <a class="tab-item  active" href="#news">
+            <a class="tab-item  active" href="#">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-hengqiu" class="shouhui"></use>
@@ -306,7 +578,7 @@
                 </span>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
+            <a class="tab-item " href="#page-fabu">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-xingqiu" class="shouhui"></use>
@@ -314,7 +586,7 @@
                 </span>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
+            <a class="tab-item " href="#me">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
@@ -324,6 +596,97 @@
             </a>
         </nav>
 
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+
+
+            <div class="content-block tag">
+                <div class="row">
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-danger">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
+                    <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
+                </div>
+            </div>
+            <div class="list-block media-list tag">
+                <ul>
+                    <volist name="newsNBA" id="vo">
+                        <li>
+                            <a href="{:U('Home/news/index')}/nid/{$vo.nid}" class="item-link item-content external" >
+                                <div class="item-media"><img src="__PUBLIC__/uploads{$vo.newpic}" style='width: 4rem;'></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{$vo.title}</div>
+                                    </div>
+
+                                    <div class="item-text" style="font-size: 12px;color: darkgray">来源：{$vo.source}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.updatetime}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--CBA-->
+    <div class="page" id="cba">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
+
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
+        </header>
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab">
+            <a class="tab-item " href="#index">
+                <span class="icon">
+                    <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-feihang" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">首页</span>
+            </a>
+            <a class="tab-item  active" href="#">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-hengqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">新闻</span>
+            </a>
+            <a class="tab-item " href="#page-fabu">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-xingqiu" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">组团</span>
+            </a>
+            <a class="tab-item " href="#me">
+                <span class="icon">
+                     <svg class="icon d4" aria-hidden="true">
+                      <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
+                    </svg>
+                </span>
+                <span class="tab-label">我的</span>
+            </a>
+        </nav>
 
         <!-- 这里是页面内容区 -->
         <div class="content">
@@ -331,7 +694,7 @@
 
             <div class="content-block tag">
                 <div class="row">
-                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success ">NBA</a></div>
                     <div class="col-20"><a href="#cba" class="button button-big button-fill button-danger">CBA</a></div>
                     <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
                     <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
@@ -362,14 +725,29 @@
     <div class="page" id="zhongchao">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
 
-            <h1 class="title">求球</h1>
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
         </header>
 
         <!-- 工具栏 -->
         <nav class="bar bar-tab">
-
-            <a class="tab-item active" href="#index">
+            <a class="tab-item " href="#index">
                 <span class="icon">
                     <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-feihang" class="shouhui"></use>
@@ -385,7 +763,7 @@
                 </span>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
+            <a class="tab-item " href="#page-fabu">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-xingqiu" class="shouhui"></use>
@@ -393,7 +771,7 @@
                 </span>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
+            <a class="tab-item " href="#me">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
@@ -403,15 +781,14 @@
             </a>
         </nav>
 
-
         <!-- 这里是页面内容区 -->
         <div class="content">
 
 
             <div class="content-block tag">
                 <div class="row">
-                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
-                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success ">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success ">CBA</a></div>
                     <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-danger">中超</a></div>
                     <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
                     <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
@@ -442,14 +819,29 @@
     <div class="page" id="xijia">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
 
-            <h1 class="title">求球</h1>
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
         </header>
 
         <!-- 工具栏 -->
         <nav class="bar bar-tab">
-
-            <a class="tab-item active" href="#index">
+            <a class="tab-item " href="#index">
                 <span class="icon">
                     <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-feihang" class="shouhui"></use>
@@ -465,7 +857,7 @@
                 </span>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
+            <a class="tab-item " href="#page-fabu">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-xingqiu" class="shouhui"></use>
@@ -473,7 +865,7 @@
                 </span>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
+            <a class="tab-item " href="#me">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
@@ -483,16 +875,15 @@
             </a>
         </nav>
 
-
         <!-- 这里是页面内容区 -->
         <div class="content">
 
 
             <div class="content-block tag">
                 <div class="row">
-                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
-                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
-                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success ">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success ">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success ">中超</a></div>
                     <div class="col-20"><a href="#xijia" class="button button-big button-fill button-danger">西甲</a></div>
                     <div class="col-20"><a href="#yingchao" class="button button-big button-fill button-success">英超</a></div>
                 </div>
@@ -513,9 +904,6 @@
                             </a>
                         </li>
                     </volist>
-
-
-
                 </ul>
             </div>
         </div>
@@ -524,14 +912,29 @@
     <div class="page" id="yingchao">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
+            <a href="#index">
+                <svg class="icon pull-right shuaxin" aria-hidden="true">
+                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
+                </svg>
+            </a>
 
-            <h1 class="title">求球</h1>
+            <h1 class="title" style="color: white">
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-q4"></use>
+                </svg>
+                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
+                    <use xlink:href="#icon-qiu"></use>
+                </svg>
+
+            </h1>
+            <button class="button button-link button-nav pull-right">
+
+            </button>
         </header>
 
         <!-- 工具栏 -->
         <nav class="bar bar-tab">
-
-            <a class="tab-item active" href="#index">
+            <a class="tab-item " href="#index">
                 <span class="icon">
                     <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-feihang" class="shouhui"></use>
@@ -547,7 +950,7 @@
                 </span>
                 <span class="tab-label">新闻</span>
             </a>
-            <a class="tab-item active" href="#page-fabu">
+            <a class="tab-item " href="#page-fabu">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-xingqiu" class="shouhui"></use>
@@ -555,7 +958,7 @@
                 </span>
                 <span class="tab-label">组团</span>
             </a>
-            <a class="tab-item active" href="#me">
+            <a class="tab-item " href="#me">
                 <span class="icon">
                      <svg class="icon d4" aria-hidden="true">
                       <use xlink:href="#icon-yuhangyuan" class="shouhui"></use>
@@ -565,18 +968,17 @@
             </a>
         </nav>
 
-
         <!-- 这里是页面内容区 -->
         <div class="content">
 
 
             <div class="content-block tag">
                 <div class="row">
-                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success">NBA</a></div>
-                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success">CBA</a></div>
-                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success">中超</a></div>
-                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success">西甲</a></div>
-                    <div class="col-20"><a href="#" class="button button-big button-fill button-danger">英超</a></div>
+                    <div class="col-20"><a href="#news" class="button button-big button-fill button-success ">NBA</a></div>
+                    <div class="col-20"><a href="#cba" class="button button-big button-fill button-success ">CBA</a></div>
+                    <div class="col-20"><a href="#zhongchao" class="button button-big button-fill button-success ">中超</a></div>
+                    <div class="col-20"><a href="#xijia" class="button button-big button-fill button-success ">西甲</a></div>
+                    <div class="col-20"><a href="#" class="button button-big button-fill button-danger ">英超</a></div>
                 </div>
             </div>
             <div class="list-block media-list tag">
@@ -678,10 +1080,10 @@
                 <ul>
                     <li class="item-content">
                         <div class="item-media">
-                            <img src="__PUBLIC__/front/image/3.png" width="50px" height="50" class="tx">
+                            <img src="__PUBLIC__/uploads{$user.head}" width="50px" height="50" class="tx">
                         </div>
                         <div class="item-inner">
-                            <div class="item-title">酱油<br><small class="d1">简介:软件学院扛把子</small></div>
+                            <div class="item-title">{$user.username}<br><small class="d1">简介:{$user.signature}</small></div>
                             <div class="item-after"></div>
                         </div>
                     </li>
@@ -900,32 +1302,33 @@
 
         <!-- 这里是页面内容区 -->
         <div class="content">
+            <volist name="yrData" id="yrData">
             <div class="card facebook-card">
                 <a href="#" class="d6  create-actions">
                     <div class="card-header no-border">
-                        <div class="facebook-avatar"><img src="__PUBLIC__/front/image/3.png" width="40" height="40" class="tx"></div>
+                        <div class="facebook-avatar"><img src="__PUBLIC__/uploads{$yrData.rhead}" width="40" height="40" class="tx"></div>
                         <div class="facebook-name">
-                            酱油
+                            {$yrData.rname}
                         </div>
-                        <div class="facebook-date"><small>如果世界漆黑,其实我很美</small></div>
+                        <div class="facebook-date"><small>{$yrData.signature}</small></div>
 
                     </div>
                 </a>
                 <div class="card-content">
-                    同学，老子想要和你一起踢球！！
+                    {$yrData.content}
                     <div class="card">
                         <div class="card-content d5">
                             <div class="list-block media-list">
                                 <ul >
                                     <li class="item-content">
                                         <div class="item-media">
-                                            <a href="#"><img src="__PUBLIC__/front/image/tx.jpg" width="55" height="55" class="tx"></a>
+                                            <a href="#"><img src="__PUBLIC__/uploads{$yrData.phead}" width="55" height="55" class="tx"></a>
                                         </div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">软件梅西赵子旭</div>
+                                                <div class="item-title">{$yrData.pname}</div>
                                             </div>
-                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
+                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#{$yrData.class}# &nbsp;&nbsp;&nbsp;{$yrData.ncontent}</small></div>
                                         </div>
                                     </li>
                                 </ul>
@@ -934,90 +1337,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card facebook-card">
-                <a href="#" class="d6">
-                    <div class="card-header no-border">
-                        <div class="facebook-avatar"><img src="__PUBLIC__/front/image/4.png" width="40" height="40" class="tx"></div>
-                        <div class="facebook-name">
-                            jiaomingbo
-                        </div>
-                        <div class="facebook-date"><small>你还要我怎样，要怎样</small></div>
-
-                    </div>
-                </a>
-                <div class="card-content">
-                    加入了我的队伍
-                    <div class="card">
-                        <div class="card-content d5">
-                            <div class="list-block media-list">
-                                <ul >
-                                    <li class="item-content">
-                                        <div class="item-media">
-                                            <a href="#"><img src="__PUBLIC__/front/image/tx.jpg" width="55" height="55" class="tx"></a>
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">软件梅西赵子旭</div>
-                                            </div>
-                                            <div class="item-subtitle xiaobiaoti"><small class="xiaobiaoti">#足球#，西操场，来一个虐一个 </small></div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <!--评论-->
-    <div class="page" id="pinglun">
-        <header class="bar bar-nav">
-            <a href="#callme">
-                <svg class="icon pull-left" aria-hidden="true">
-                    <use xlink:href="#icon-quxiao1" class="shouhui"></use>
-                </svg>
-            </a>
-            <h1 class="title">我要评论</h1>
-            <a href="#callme">
-                <svg class="icon pull-right" aria-hidden="true">
-                    <use xlink:href="#icon-ok" class="shouhui"></use>
-                </svg>
-            </a>
-        </header>
-
-        <!-- 工具栏 -->
-        <nav class="bar bar-tab">
-            <a class="tab-item external" href="#">
-                <span class="icon">
-                    <svg class="icon1" aria-hidden="true">
-                       <use xlink:href="#icon-weixiao" class="shouhui"></use>
-                    </svg>
-                </span>
-            </a>
-            <a class="tab-item external" href="#">
-                <span class="icon">
-                    <svg class="icon1" aria-hidden="true">
-                       <use xlink:href="#icon-xiangce" class="shouhui"></use>
-                    </svg>
-                </span>
-            </a>
-            <a class="tab-item external" href="#">
-                <span class="icon">
-                    <svg class="icon1" aria-hidden="true">
-                       <use xlink:href="#icon-xiangji" class="shouhui"></use>
-                    </svg>
-                </span>
-            </a>
-
-        </nav>
-
-        <!-- 这里是页面内容区 -->
-        <div class="content fabu"  >
-
-
-            <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来评论吧~~"></textarea>
+            </volist>
 
         </div>
     </div>
@@ -1250,22 +1570,22 @@
                 <ul>
                     <li class="item-content">
                         <div class="item-media">
-                            <img src="__PUBLIC__/front/image/1.jpg" width="50px" height="50">
+                            <img src="__PUBLIC__/uploads{$user.head}" width="50px" height="50" style="border-radius:30%">
                         </div>
                         <div class="item-inner">
-                            <div class="item-title">阿斯蒂芬<br><small class="d1">123456789@qq.com</small></div>
+                            <div class="item-title">{$user.username}<br><small class="d1">{$user.email}</small></div>
                             <div class="item-after"></div>
                         </div>
                     </li>
                     <li class="item-content">
                         <div class="item-inner">
-                            <div class="item-title" ><a href="#" rel="external">添加账号</a></div>
+                            <div class="item-title" ><a href="{:U('Home/login/login')}" rel="external">添加账号</a></div>
                         </div>
                     </li>
 
                     <li class="item-content">
                         <div class="item-inner">
-                            <div class="item-title" ><a href="#" rel="external">退出登录</a></div>
+                            <div class="item-title" ><a href="{:U('Home/login/logout')}" rel="external">退出登录</a></div>
                         </div>
                     </li>
 
