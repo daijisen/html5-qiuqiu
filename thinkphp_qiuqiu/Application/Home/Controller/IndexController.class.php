@@ -6,16 +6,13 @@ class IndexController extends Controller {
 
         if(isset($_SESSION['username'])){
             //首页信息获取
-                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic
+                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic,y.num
                                          from users x,acts y
                                          where x.pid = y.pid
                                          order by aid desc");
 
                 $this->assign('indexdata',$indexData);
-                //团队人数统计
-                //$sqlTeam = "select y.*,num from team y,(select *,count(*) num from team group by aid) x where y.aid = x.aid order by tid";
-                //$tnum = M()->query($sqlTeam);
-                //dump($tnum);
+                //团队人数统
 
             //新闻获取
                //NBA
@@ -157,6 +154,7 @@ class IndexController extends Controller {
              }
              $time = date("Y-m-d H:i:s");
              $data['sendtime'] = $time;
+             $data['num'] =  1;
 
 
 
