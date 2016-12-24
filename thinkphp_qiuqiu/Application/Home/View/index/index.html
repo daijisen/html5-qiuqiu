@@ -178,6 +178,7 @@
                 <div class="card facebook-card">
                     <div class="card-header no-border">
                         <div class="facebook-avatar"><img class="tx" src="__PUBLIC__/uploads{$vo.head}" width="34" height="34"></div>
+                        <input id="aid" name="aid"  value="{$vo.aid}" type="hidden">
                         <div class="facebook-name">{$vo.username}</div>
                         <div class="facebook-date">{$vo.signature}</div>
                     </div>
@@ -192,24 +193,23 @@
                         </div>
                     </div>
                     <div class="card-footer no-border">
-                        <a href="#comment" class="link">
 						<span class="badge">
 							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-duoseqiu"></use>
-						</svg>团队（{$vo.num}/10)</span>
-                        </a>
-                        <a href="#team" class="link">
+						</svg>团队(<span id="joinnum">{$vo.num}</span>/10)</span>
+
+                        <a href="#" class="link2" id="join">
 						<span class="badge">
 							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-huojian"></use>
 						</svg>加入团队
 						</span>
                         </a>
-                        <a href="{:U('Home/comment/index')}/aid/{$vo.aid}" class="link">
+                        <a href="{:U('Home/team/index')}/nid/{$vo.aid}" class="link3">
 						<span class="badge">
 							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-yuhangyuan2"></use>
-						</svg>评论一波
+						</svg>团队详情
 						</span>
                         </a>
                     </div>
@@ -265,6 +265,28 @@
 
                         </div>
                     </div>
+                </div>
+                <div class="card-footer no-border">
+                    <a href="#comment" class="link">
+						<span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-duoseqiu"></use>
+						</svg>团队（2/10)</span>
+                    </a>
+                    <a href="#comment" class="link">
+						<span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-huojian"></use>
+						</svg>团队详情
+						</span>
+                    </a>
+                    <a href="{:U('Home/comment/index')}/aid/{$vo.aid}" class="link">
+						<span class="badge">
+							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
+							<use xlink:href="#icon-yuhangyuan2"></use>
+						</svg>评论一波
+						</span>
+                    </a>
                 </div>
 
             </div>
@@ -448,96 +470,6 @@
 
             <textarea  name="textarea" id="textarea" class="shuru"data-position="incline" type="number" placeholder="快来评论吧~~"></textarea>
 
-        </div>
-    </div>
-    <!--加入团队-->
-    <div class="page" id="team">
-        <header class="bar bar-nav">
-            <a href="#index">
-                <svg class="icon pull-right shuaxin" aria-hidden="true">
-                    <use xlink:href="#icon-shuaxin" class="shouhui"></use>
-                </svg>
-            </a>
-
-            <h1 class="title" style="color: white">
-                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
-                    <use xlink:href="#icon-q4"></use>
-                </svg>
-                <svg class="icon logo" aria-hidden="true" style="width: 30px;height: 30px" >
-                    <use xlink:href="#icon-qiu"></use>
-                </svg>
-
-            </h1>
-
-        </header>
-        <div class="content"></div>
-        <nav class="bar bar-tab">
-            <a class="tab-item  active" href="#">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-feihang"></use>
-                </svg>
-                <span class="tab-label">首页</span>
-            </a>
-            <a class="tab-item " href="#news">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-hengqiu"></use>
-                </svg>
-                <span class="tab-label">新闻</span>
-            </a>
-            <a class="tab-item " href="#page-fabu">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-xingqiu"></use>
-                </svg>
-                <span class="tab-label">组团</span>
-            </a>
-            <a class="tab-item " href="#me">
-                <svg class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-yuhangyuan"></use>
-                </svg>
-                <span class="tab-label">我的</span>
-            </a>
-
-        </nav>
-        <div class="content">
-            <div class="card facebook-card">
-                <div class="card-header no-border">
-                    <div class="facebook-avatar"><img class="tx" src="__PUBLIC__/front/image/tx.jpg" width="34" height="34"></div>
-                    <div class="facebook-name">自诩</div>
-                    <div class="facebook-date">软件梅西，不服来辩</div>
-                </div>
-                <div class="card-content"><a href="#comment">
-                    <img src="__PUBLIC__/front/image/bj.jpg" width="100%">
-                    <div class="card-content-inner">
-                        <div class="content-block">
-                            <p>#<a >足球</a>#</p>
-                            <p>中午12点西操场有踢球的没？</p>
-
-                        </div>
-                    </div></a>
-                </div>
-                <div class="card-footer no-border">
-                    <a href="#comment" class="link">
-						<span class="badge">
-							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
-							<use xlink:href="#icon-duoseqiu"></use>
-						</svg>团队（2/10)</span>
-                    </a>
-                    <a href="#comment" class="link">
-						<span class="badge">
-							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
-							<use xlink:href="#icon-huojian"></use>
-						</svg>加入团队
-						</span>
-                    </a>
-                    <a href="{:U('Home/comment/index')}/aid/{$vo.aid}" class="link">
-						<span class="badge">
-							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
-							<use xlink:href="#icon-yuhangyuan2"></use>
-						</svg>评论一波
-						</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
     <!--新闻列表页-->
@@ -2018,24 +1950,24 @@
             return new ActiveXObject("Microsoft.XMLHTTP");
         }
     }
-    document.getElementById("username").onblur = function() {
+    document.getElementById("join").onclick = function() {
         var xhr = getXhr();
-        var loginname = document.getElementById("username").value;
+        var loginname = document.getElementById("aid").value;
 
-        xhr.open("post", "server.php", true);
+        xhr.open("post", "{:U('Home/index/join')}", true);
 
-        var data = "username=" + loginname;
+        var data = "aid=" + loginname;
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
-                var message = "";
+                var message = document.getElementById('joinnum').innerHTML;
                 if (xhr.responseText == "1") {
-                    message = "可用！";
+                    message++;
                 }
                 else {
-                    message = "用户名已被注册！";
+                    alert("对不起，您没能加入团队");
                 }
-                document.getElementById('errorTip').innerHTML = message;
+                document.getElementById('joinnum').innerHTML = message;
             }
         }
         xhr.send(data);
