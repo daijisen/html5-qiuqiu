@@ -6,7 +6,7 @@ class IndexController extends Controller {
 
         if(isset($_SESSION['username'])){
             //首页信息获取
-                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic,y.num
+                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic,y.num,y.aid
                                          from users x,acts y
                                          where x.pid = y.pid
                                          order by aid desc");
@@ -121,6 +121,23 @@ class IndexController extends Controller {
             else{
                 $this->error('数据更新失败');
             }
+    }
+    //首页点击加入团队后的命令
+    public function join(){
+            $aid = $_POST['aid'];
+            //进行数据库的操作
+            $actModel = M('acts');
+            $data = $actModel->where("aid = $aid")->select();
+            $data =$data[0];
+            $data['num'] += 1;
+            if (!   $actModel->save($data) ) {
+                //用户名已存在
+                echo "0";
+            }
+            else {
+                //用户名不存在
+                echo "1";
+            }
         }
 
     public function store(){
@@ -144,7 +161,7 @@ class IndexController extends Controller {
             $info = $upload->upload();
 
             if(!$info) {
-                              $this->error($upload->getError());
+                  $this->error($upload->getError());
             }else{
                 // 上传成功
                  foreach($info as $file){
