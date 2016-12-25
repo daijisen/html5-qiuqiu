@@ -141,16 +141,16 @@
             <div class="content">
                 <div class="card facebook-card">
                     <div class="card-header no-border">
-                        <div class="facebook-avatar"><img class="aim" src="__PUBLIC__/front/image/tx.jpg" width="38" height="38"></div>
-                        <div class="facebook-name">自诩</div>
-                        <div class="facebook-date">软件梅西，不服来辩</div>
+                        <div class="facebook-avatar"><img class="aim" src="__PUBLIC__/uploads{$indexdata.head}" width="38" height="38" style="border-radius:100%"></div>
+                        <div class="facebook-name">{$indexdata.username}</div>
+                        <div class="facebook-date">{$indexdata.signature}</div>
                     </div>
                     <div class="card-content">
-                        <img src="__PUBLIC__/front/image/bj.jpg" width="100%">
+                        <img src="__PUBLIC__/front/image/bj.jpg" width="100%" style="border-radius:10%">
                         <div class="card-content-inner">
                             <div class="content-block">
-                                <p>#<a >足球</a>#</p>
-                                <p>中午12点西操场有踢球的没？</p>
+                                <p>#<a >{$indexdata.class}</a>#</p>
+                                <p>{$indexdata.ncontent}</p>
 
                             </div>
                         </div>
@@ -162,14 +162,8 @@
 							<use xlink:href="#icon-duoseqiu"></use>
 						</svg>团队（2/10)</span>
                         </a>
-                        <a href="#comment" class="link">
-						<span class="badge">
-							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
-							<use xlink:href="#icon-huojian"></use>
-						</svg>团队详情
-						</span>
-                        </a>
-                        <a href="{:U('Home/comment/index')}/aid/{$vo.aid}" class="link">
+
+                        <a href="{:U('Home/comment/index')}/nid/{$vo.aid}" class="link">
 						<span class="badge">
 							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-yuhangyuan2"></use>
