@@ -11,8 +11,8 @@ class IndexController extends Controller {
                                          where x.pid = y.pid
                                          order by aid desc");
 
+
                 $this->assign('indexdata',$indexData);
-                //团队人数统
 
             //新闻获取
                //NBA
@@ -62,6 +62,14 @@ class IndexController extends Controller {
 
         }else{
 
+        //首页信息获取
+                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic,y.num,y.aid
+                                         from users x,acts y
+                                         where x.pid = y.pid
+                                         order by aid desc");
+
+                $this->assign('indexdata',$indexData);
+
 
         //新闻获取
             //NBA
@@ -84,15 +92,6 @@ class IndexController extends Controller {
                 $new5Model = M('news');
                 $new5Data = $new5Model->where("type=5")->select();
                 $this->assign('newsYing',$new5Data);
-
-
-            //首页信息获取
-                $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic
-                                         from users x,acts y
-                                         where x.pid = y.pid
-                                         order by aid desc");
-
-                $this->assign('indexdata',$indexData);
 
             //账户管理
                 $pid = '0';
@@ -186,3 +185,4 @@ class IndexController extends Controller {
     }
 
 }
+
