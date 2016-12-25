@@ -184,34 +184,21 @@
 
                         <div class="list-block media-list"style="margin-top: 0px">
                             <ul>
+                                <volist name="team" id="vo">
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-media"><img src="__PUBLIC__/uploads{$vo.head}" width="40px" height="40px">
 
-                                <li>
-                                    <div class="item-content">
-                                        <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
-
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">用户1</div>
                                             </div>
-                                            <div class="item-subtitle">个性简介</div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="item-content">
-                                        <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
-
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">用户1</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">{$vo.username}</div>
+                                                </div>
+                                                <div class="item-subtitle" style="color:dimgray;font-size: 15px">{$vo.signature}</div>
                                             </div>
-                                            <div class="item-subtitle">个性简介</div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                </volist>
 
                             </ul>
                         </div>
@@ -220,29 +207,26 @@
                     <div id="tab2" class="tab">
                         <div class="list-block media-list"style="margin-top: 0px">
                             <ul>
+                                <volist name="reply" id="vo">
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-media"><img src="__PUBLIC__/uploads{$vo.head}" width="40px" height="40px">
 
-                                <li>
-                                    <div class="item-content">
-                                        <div class="item-media"><img src="__PUBLIC__/front/image/tx.jpg" width="40px" height="40px">
-
-                                        </div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">用户1</div>
                                             </div>
-                                            <div class="item-subtitle">个性简介</div>
+                                            <div class="item-inner">
+                                                <div class="item-title-row">
+                                                    <div class="item-title">{$vo.username}</div>
+                                                </div>
+                                                <div class="item-subtitle" style="color:dimgray;font-size: 15px">>{$vo.signature}</div>
+                                            </div>
                                         </div>
-                                        <div class="item-media" style="padding-right: 50px">
-                                            <a href="#"><svg class="icon" aria-hidden="true" style="width: 20px;height: 20px">
-                                                <use xlink:href="#icon-marker"></use>
-                                            </svg>
-                                                回复</a>
+                                        <div class="item-inner" style="padding-left: 40px;font-family: 幼圆">
+                                            {$vo.content}
                                         </div>
-                                    </div>
-                                    <div class="item-inner" style="padding-left: 40px">
-                                        一起踢球啊
-                                    </div>
-                                </li>
+                                    </li>
+                                </volist>
+
+
 
                             </ul>
                         </div>
