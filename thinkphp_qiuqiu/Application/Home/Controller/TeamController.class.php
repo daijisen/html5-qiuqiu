@@ -1,16 +1,18 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class TeamNewsController extends Controller {
+class TeamController extends Controller {
     public function index(){
-    //新闻内容获取
 
-        $nid = I('nid');
-        $sql = "select news.*,name from news,newstype where news.type = newstype.type and nid=$nid order by nid desc";
-        $new1Data = M()->query($sql);
-        $this->assign('newsContent',$new1Data[0]);
+    $aid = I('aid');
+    dump($aid);
+    $indexData = M()->query("select x.username,x.signature,x.head,y.class,y.ncontent,y.uploadpic,y.num,y.aid
+                             from users x,acts y
+                             where x.pid = y.pid and aid = $aid");
+    $this->assign('indexdata',$indexData[0]);
 
-        $this->display();
+    $this->display();
+
     }
 
 
