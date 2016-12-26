@@ -124,10 +124,18 @@ class IndexController extends Controller {
             $aid = $_POST['aid'];
             //进行数据库的操作
             $actModel = M('acts');
-            $data = $actModel->where("aid = $aid")->select();
-            $data =$data[0];
-            $data['num'] += 1;
-            if (!   $actModel->save($data) ) {
+            $data1 = $actModel->where("aid = $aid")->select();
+            $data1 =$data1[0];
+            $data1['num'] += 1;
+
+            //存入team
+            $teamModel = M('team');
+            $data2['aid'] = $aid;
+            $data2['mid'] = $_SESSION['uid'];
+            $time = date("Y-m-d H:i:s");
+            $data2['updatetime'] = $time;
+
+            if (!$actModel->save($data) && !$teamModel->add($data2)) {
                 //用户名已存在
                 echo "0";
             }
