@@ -146,7 +146,7 @@
                         <div class="facebook-date">{$indexdata.signature}</div>
                     </div>
                     <div class="card-content">
-                        <img src="__PUBLIC__/front/image/bj.jpg" width="100%" style="border-radius:10%">
+                        <img src="__PUBLIC__/uploads{$indexdata.uploadpic}" width="100%" style="border-radius:10%">
                         <div class="card-content-inner">
                             <div class="content-block">
                                 <p>#<a >{$indexdata.class}</a>#</p>
@@ -163,7 +163,7 @@
 						</svg>团队（2/10)</span>
                         </a>
 
-                        <a href="{:U('Home/comment/index')}/nid/{$vo.aid}" class="link">
+                        <a href="{:U('Home/comment/index')}/aid/{$indexdata.aid}" class="link">
 						<span class="badge">
 							<svg class="icon" aria-hidden="true" style="width: 30px;height: 30px">
 							<use xlink:href="#icon-yuhangyuan2"></use>
