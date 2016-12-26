@@ -176,8 +176,7 @@ class IndexController extends Controller {
 
             if($actModel->add($data))
             {
-                 $actModel =
-                 $this->success('数据添加成功','index');
+                 $this->redirect("Index/index");
             }
             else{
                 $this->error('数据添加失败');
