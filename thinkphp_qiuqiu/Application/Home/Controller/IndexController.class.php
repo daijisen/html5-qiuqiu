@@ -10,8 +10,6 @@ class IndexController extends Controller {
                                          from users x,acts y
                                          where x.pid = y.pid
                                          order by aid desc");
-
-
                 $this->assign('indexdata',$indexData);
 
             //新闻获取
