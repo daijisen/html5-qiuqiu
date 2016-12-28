@@ -204,32 +204,29 @@ $(function () {
 
 
   //对话框
-  $(document).on("pageInit", "#page-modal", function(e, id, page) {
-    var $content = $(page).find('.content');
-    $content.on('click','.alert-text',function () {
-      $.alert('这是一段提示消息');
-    });
 
-    $content.on('click','.alert-text-title', function () {
-      $.alert('这是一段提示消息', '这是自定义的标题!');
-    });
 
-    $content.on('click', '.alert-text-title-callback',function () {
-      $.alert('这是自定义的文案', '这是自定义的标题!', function () {
-        $.alert('你点击了确定按钮!')
-      });
-    });
-    $content.on('click','.confirm-ok', function () {
-      $.confirm('你确定吗?', function () {
-        $.alert('你点击了确定按钮!');
-      });
-    });
-    $content.on('click','.prompt-ok', function () {
-      $.prompt('你叫什么问题?', function (value) {
-        $.alert('你输入的名字是"' + value + '"');
-      });
+
+
+  //发布页
+  $(document).on("pageInit", "#page-fabu", function(e, id, page) {
+    var $content = $(page).find('.bar.bar-nav');
+    $content.on('click', '.alert', function () {
+      var text1=document.getElementById("zutuan");
+
+      if(text1.value=="")
+      {
+        $.alert("不能为空哦！");
+      }else {
+        $.alert("发布成功！");$.router.load("#index",true);  //加载内联页面
+      }
+
     });
   });
+  //reload
+  $(document).on("pageRemoved", "#page-fabu", function(e, pageId, $page) {});
+
+
 
   //操作表
   $(document).on("pageInit", "#page-action", function(e, id, page) {
@@ -332,6 +329,9 @@ $(function () {
       ]
     });
   });
+
+
+
   $(document).on("pageInit", "#page-datetime-picker", function(e) {
     $("#datetime-picker").datetimePicker({
       toolbarTemplate: '<header class="bar bar-nav">\
