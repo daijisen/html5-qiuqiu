@@ -1,0 +1,8 @@
+﻿1.导航栏通过ng-repeat实现循环输出
+2.从控制器里读取其中的数据
+3.实现外部链接通过
+ .when('/a',{templateUrl:'view/aa.html'})
+ .when('/b',{templateUrl:'view/bb.html'})          
+4.通过orderby实现按照ID将粉丝排序
+5.隐藏元素，通过ng-hide的返回值为true实现
+6.通过ng-mode可以实现文本域的数据双向绑定
